@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <title>Hệ Thống Quản Lý Điểm</title>
     <link rel="icon" type="image/png" href="image/logo.png"/>
+    <script src="filter.js"></script>
 </head>
 <body>
 
@@ -41,207 +42,86 @@
         <!--Form-->
 
         <div class="content">
-            <form>
-                <div class="search">
-                    <h1 for="mySearch" class="mySearch">Xem Điểm</h1>
-                    <div>
-                        <select name="SearchSelection" id="mySearch">
-                            <option value="1">Mã Sinh Viên</option>
-                            <option value="2">Lớp</option>
-                            <option value="3">Khoá</option>
-                            <option value="4">Ngành</option>
-                            <option value="5">Họ và Tên</option>
-                        </select>
-                        <input type="search" id="mySearch" name="q" placeholder="Tra cứu điểm và Thông tin" size="50">
-                        <button>Tìm Kiếm</button>
-                    </div>
-                </div>
-            </form>
             <div class="scoreBoard extended">
+                <h1 for="mySearch" class="mySearch">Xem Điểm</h1>
                 <table cellspacing="0" border="1">
                 <!--tr*8-->
-                    <tr>
-                        <th>STT</th>
-                        <th>Họ và Tên</th>
-                        <th>Mã SV</th>
-                        <th>Khoá</th>
-                        <th>Ngành</th>
-                        <th>Lớp</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><a href="ScoreBoard/Ngo_Sach_Minh_Hieu_211210292.html">Ngô Sách Minh Hiếu</a></td>
-                        <td>211210292</td>
-                        <td>62</td>
-                        <td>CNTT</td>
-                        <td>CNTT3</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><a href="#">Đặng Bá Tài</a></td>
-                        <td></td>
-                        <td>62</td>
-                        <td>CNTT</td>
-                        <td>CNTT3</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><a href="#">Lê Đức Bình Minh</a></td>
-                        <td></td>
-                        <td>62</td>
-                        <td>CNTT</td>
-                        <td>CNTT3</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><a href="#">Trần Tiến Dương</a></td>
-                        <td></td>
-                        <td>62</td>
-                        <td>CNTT</td>
-                        <td>CNTT3</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td><a href="#">Nguyễn Hồng Sơn(Đấng)</a></td>
-                        <td></td>
-                        <td>62</td>
-                        <td>CNTT</td>
-                        <td>CNTT3</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td><a href="#">Vũ Hồng Hạnh(:>)</a></td>
-                        <td></td>
-                        <td>62</td>
-                        <td>CNTT</td>
-                        <td>CNTT3</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
-                    <tr>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                        <td>filler</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th col-id = 1>STT</th>
+                            <th col-id = 2>Họ và Tên</th>
+                            <th col-id = 3>Mã SV </th>
+                            <th col-id = 4>Khoá
+                                <select class="tableFilter" onchange="filterRows()">
+                                    <option value="all"></option>
+                                </select>
+                            </th>
+                            <th col-id = 5>Ngành
+                                <select class="tableFilter" onchange="filterOfFilter()">
+                                    <option value="all"></option>
+                                </select>
+                            </th>
+                            <th col-id = 6>Lớp
+                                <select class="tableFilter" onchange="filterRows()">
+                                    <option value="all"></option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="ScoreBoard/Ngo_Sach_Minh_Hieu_211210292.html">Ngô Sách Minh Hiếu</a></td>
+                            <td>211210292</td>
+                            <td>62</td>
+                            <td>CNTT</td>
+                            <td>CNTT3</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="#">:></a></td>
+                            <td></td>
+                            <td>63</td>
+                            <td>TKPM</td>
+                            <td>TKPM3</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>:></td>
+                            <td></td>
+                            <td>63</td>
+                            <td>TKPM</td>
+                            <td>TKPM4</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>:></td>
+                            <td></td>
+                            <td>62</td>
+                            <td>CNTT</td>
+                            <td>CNTT4</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>:></td>
+                            <td></td>
+                            <td>62</td>
+                            <td>TKPM</td>
+                            <td>TKPM4</td>
+                        </tr>
+                    </tbody>
+                    
                 </table>
             </div>
 
         </div>
 
     </div>
+
+    <script>
+        
+        getUniqueValueFromCol()
+    </script>
 
 
 </body>

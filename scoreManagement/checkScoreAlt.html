@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <title>Hệ Thống Quản Lý Điểm</title>
+    <link rel="icon" type="image/png" href="image/logo.png"/>
+</head>
+<body>
+
+    <!--Form-->
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Trường ĐH Giao Thông Vận Tải</h1>
+            <h1 class="title">HỆ THỐNG QUẢN LÝ ĐIỂM</h1>
+        </div>
+        <div class="sidebar">
+            <nav class="navlinks">
+                <div class="mainchoice">
+                    <a href="../index.html">Trang Chủ</a>
+                </div>
+                <div class="mainchoice">
+                    <a href="">Quản Lý Điểm</a>
+                </div>
+                <div class="subchoice">
+                    <a href="#">Nhập Điểm</a>
+                </div>
+                <div class="subchoice">
+                    <a href="checkScore.html">Xem Điểm</a>
+                </div>
+                <div class="mainchoice">
+					<a href="#">Thông Tin</a>
+				</div>
+                <div class="mainchoice">
+					<a href="#">Tài Khoản</a>
+				</div>
+            </nav>
+        </div>
+        <!--Form-->
+
+        <div class="content">
+            <form>
+                <div class="search">
+                    <h1 for="mySearch" class="mySearch">Xem Điểm</h1>
+                    <div>
+                        <select name="SearchSelection" id="mySearch">
+                            <option value="1">Mã Sinh Viên</option>
+                            <option value="2">Lớp</option>
+                            <option value="3">Khoá</option>
+                            <option value="4">Ngành</option>
+                            <option value="5">Họ và Tên</option>
+                        </select>
+                        <input type="search" id="mySearch" name="q" placeholder="Tra cứu điểm và Thông tin" size="50">
+                        <button>Tìm Kiếm</button>
+                    </div>
+                </div>
+            </form>
+            <div class="scoreBoard extended">
+                <table cellspacing="0" border="1">
+                <!--tr*8-->
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ và Tên</th>
+                        <th>Mã SV</th>
+                        <th>Khoá</th>
+                        <th>Ngành</th>
+                        <th>Lớp</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="ScoreBoard/Ngo_Sach_Minh_Hieu_211210292.html">Ngô Sách Minh Hiếu</a></td>
+                        <td>211210292</td>
+                        <td>62</td>
+                        <td>CNTT</td>
+                        <td>CNTT3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="#">Đặng Bá Tài</a></td>
+                        <td></td>
+                        <td>62</td>
+                        <td>CNTT</td>
+                        <td>CNTT3</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="#">Lê Đức Bình Minh</a></td>
+                        <td></td>
+                        <td>62</td>
+                        <td>CNTT</td>
+                        <td>CNTT3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="#">Trần Tiến Dương</a></td>
+                        <td></td>
+                        <td>62</td>
+                        <td>CNTT</td>
+                        <td>CNTT3</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a href="#">Nguyễn Hồng Sơn(Đấng)</a></td>
+                        <td></td>
+                        <td>62</td>
+                        <td>CNTT</td>
+                        <td>CNTT3</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><a href="#">Vũ Hồng Hạnh(:>)</a></td>
+                        <td></td>
+                        <td>62</td>
+                        <td>CNTT</td>
+                        <td>CNTT3</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
