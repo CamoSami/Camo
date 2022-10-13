@@ -31,7 +31,7 @@
                     <a href="../checkScore.html">Xem Điểm</a>
                 </div>
                 <div class="mainchoice">
-					<a href="#">Thông Tin</a>
+					<a href="../../information/information.html">Thông Tin</a>
 				</div>
                 <div class="mainchoice">
 					<a href="#">Tài Khoản</a>
@@ -60,7 +60,9 @@
                     </tr>
                 </table>
             </div>
+
             <h2 style="text-align:center">Điểm Thi</h2>
+            
             <div class="scoreBoard medium">
                 <table cellspacing="0" border="1">
                     <tr>
@@ -438,10 +440,51 @@
             </div>
 
             <div class="returnInsertScore">
-                <a href="#">Sửa Điểm</a>
+                <button class="fix">Sửa Điểm</button>
+                <button class="delete">Xoá Điểm</button>
             </div>
         </div>
     </div>
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"
+    >
+    </script>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
+    <script>
+        console.log($(".returnInsertScore > .detele") + " " + document.querySelector(".returnInsertScore > .delete"));
+
+        $(".delete").on('click', function() {
+            Swal.fire({
+                title: 'Bạn có chắc chắn không?',
+                text: 'Bạn sẽ không quay lại được đâu',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Nôu',
+                confirmButtonColor: 'rgb(210, 30, 30)',
+                dangerMode: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Hoàn thành!',
+                        'Điểm này đã được xoá :<',
+                        'success'
+                    ).then(function() {
+                        window.location.href= "../checkScore.html"
+                    });
+                }
+                else if (result.isDismissed) {
+                    Swal.fire(
+                        'Hoàn thành!',
+                        'Điểm này chưa được xoá :>',
+                    )
+                }
+            })
+        });
+    </script>
 </html>

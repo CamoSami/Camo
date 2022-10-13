@@ -94,7 +94,7 @@ function filterOfFilter() {
         }
     });
     filterRows();
-}
+};
 
 function filterRows() {
     allFilters = document.querySelectorAll(".tableFilter");
@@ -140,5 +140,4 @@ function filterRows() {
             row.style.display = "none";
         }
     });
-
-}
+};
