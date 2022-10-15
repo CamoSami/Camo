@@ -9,38 +9,44 @@ body {
     width: 100vw;
     display: grid;
     grid-template-columns: auto repeat(4, 1fr);
-    grid-template-rows: 100px 1fr;
 }
 .header{
     text-decoration: none;
     grid-column: span 5;
-    height: 100px;
     color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     background-color: #002395;
 }
 .header .title:first-of-type {
     grid-column: span 1;
+    align-self: center;
     margin-left: 6%;
 }
 .header .title:last-of-type {
     grid-column: span 1;
+    align-self: center;
     margin-left: auto;
-    margin-right: 6%;
+    margin-right: calc(6% + 6px);
 }
 .article, .sidebar {
     grid-row: 1fr;
 }
 .sidebar {
-    width: 15vw;
     background-color: #3e3e3e;
 }
-
-.article {
-    margin: 2rem;
-    grid-column: span 4;
-    font-size: 16px;
+#button {
+    display: none;
+    background-color:#d9d9d9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: auto;
+    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+}
+#button:hover {
+    width: 56px;
+    height: 56px;
 }
 .navlinks {
     height: 100%;
@@ -50,25 +56,21 @@ body {
 .navlinks div.mainchoice > a {
     text-decoration: none;
     color: white;
-    font-size: 24px;
     text-align: center;
 }
 .navlinks div.subchoice > a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
     text-align: center;
 }
-.navlinks div.mainchoice{
+.navlinks .mainchoice{
     padding: 20px;
-    height: 30px;
     display: flex;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1)
+    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
 }
-.navlinks div.subchoice{
+.navlinks .subchoice{
     padding: 15px 0 15px 20px;
-    height: 20px;
     display: flex;
     align-items: center;
     transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
@@ -76,17 +78,14 @@ body {
 }
 .navlinks div.mainchoice:hover{
     background-color: black;
-    height: 60px;
 }
 .navlinks div.subchoice:hover{
     background-color: rgb(152, 152, 152);
-    height: 40px;
 }
 .content{
     grid-column: span 4;
     margin: 0 auto 0 auto;
     max-width: 880px;
-    width: 65vw;
 }
 
 
@@ -129,41 +128,37 @@ table tr td{
     font-size: 14px;
 }
 .scoreBoard.extended{
-    margin: 16px 0 0 0;
     max-height: 65vh;
     overflow-y: scroll;
-}
-.scoreBoard.minimized{
-    max-height: 30%;
 }
 .scoreBoard.medium{
     max-height: 165px;
     overflow-y: scroll;
 }
+.scoreBoard.minimized{
+    max-height: 25%;
+}
 .scoreBoard table tr:first-of-type th{
     background: #002395;
     color: white;
 }
-.scoreBoard.extended table tr:nth-child(2n + 1), .scoreBoard.medium table tr:nth-child(2n + 1){
+.scoreBoard.extended table tr:nth-child(2n + 1), .scoreBoard.medium table tr:nth-child(2n + 1), .scoreBoard.minimized table tr:nth-child(2n + 1){
     background:#d9d9d9;
 }
 div.returnInsertScore{
     padding-top: 8px;
-    width: 240px;
-    height: 48px;
     margin: 0 0 0 auto;
 }
 div.returnInsertScore button {
     float: right;
     margin-left: 4px;
-    width: 80px;
     text-align: center;
     background-color: #5f5f5f;
     color:white;
     transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    cursor: pointer;
 }
 div.returnInsertScore button:hover {
     background-color:rgb(152, 152, 152);
-    width: 120px;
 }
 

@@ -36,8 +36,9 @@ function getUniqueValueFromCol() {
         //alert("Col id: " + i + " has Unique values: \n" + unique_col_values_dict[i]);
     };
     
-    console.log(unique_col_values_dict);
+    //console.log(unique_col_values_dict);
     updateSelectOptions();
+    filterOfFilter()
 };
 
 function updateSelectOptions() {
@@ -65,7 +66,7 @@ function updateSelectOptions() {
 
 function filterOfFilter() {
     allFilters = document.querySelectorAll(".tableFilter");
-    console.log(allFilters);
+    // console.log(allFilters);
 
     filter_5 = allFilters[1];
     filter_6 = allFilters[2];

@@ -5,15 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="checkScore-res.css">
     <title>Hệ Thống Quản Lý Điểm</title>
     <link rel="icon" type="image/png" href="image/logo.png"/>
     <script src="filter.js"></script>
+    <script src="take.js"></script>
 </head>
 <body>
 
     <!--Form-->
     <div class="container">
         <div class="header">
+            <button id="button">>></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+                });
+            </script> 
+            
             <h1 class="title">Trường ĐH Giao Thông Vận Tải</h1>
             <h1 class="title">HỆ THỐNG QUẢN LÝ ĐIỂM</h1>
         </div>
@@ -73,252 +85,54 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><a href="ScoreBoard/Ngo_Sach_Minh_Hieu_211210292.html">Ngô Sách Minh Hiếu</a></td>
+                            <!-- <td><a href="ScoreBoard/Ngo_Sach_Minh_Hieu_211210292.html">Ngô Sách Minh Hiếu</a></td> -->
+                            <td><a href="#" id="1">Ngô Sách Minh Hiếu</a>
                             <td>211210292</td>
                             <td>62</td>
                             <td>CNTT</td>
                             <td>CNTT3</td>
                         </tr>
                         <tr>
-                            <td>6</td>
-                            <td><a href="#">:></a></td>
-                            <td></td>
+                            <td>2</td>
+                            <td><a href="#" id="2">Nguyễn Hồng Sơn</a>
+                            <td>211210292</td>
+                            <td>62</td>
+                            <td>CNTT</td>
+                            <td>CNTT3</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="#" id="3">Vũ Hồng Hạnh</a>
+                            <td>211210292</td>
+                            <td>62</td>
+                            <td>CNTT</td>
+                            <td>CNTT3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#" id="3">filler</a></td>
+                            <td>meh</td>
+                            <td>63</td>
+                            <td>TKPM</td>
+                            <td>TKPM2</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="#" id="3">filler</a></td>
+                            <td>meh</td>
                             <td>63</td>
                             <td>TKPM</td>
                             <td>TKPM3</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>63</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
+                            <td><a href="#" id="3">filler</a></td>
+                            <td>meh</td>
                             <td>62</td>
                             <td>CNTT</td>
-                            <td>CNTT4</td>
+                            <td>CNTT3</td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>:></td>
-                            <td></td>
-                            <td>62</td>
-                            <td>TKPM</td>
-                            <td>TKPM4</td>
-                        </tr>
+                        
                     </tbody>
                     
                 </table>
@@ -329,8 +143,9 @@
     </div>
 
     <script>
+        testing();
         
-        getUniqueValueFromCol()
+        getUniqueValueFromCol();
     </script>
 
 
