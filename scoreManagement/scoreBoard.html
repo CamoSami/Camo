@@ -22,8 +22,11 @@
 
                 button.addEventListener('click', () => {
                     document.querySelector(".sidebar").classList.toggle("active");
+
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
                 });
-            </script> 
+            </script>
             
             <h1 class="title">Trường ĐH Giao Thông Vận Tải</h1>
             <h1 class="title">HỆ THỐNG QUẢN LÝ ĐIỂM</h1>

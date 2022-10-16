@@ -1,4 +1,5 @@
-function testing() {
+
+function getBoardData() {
 
     document.querySelectorAll("td a").forEach(link => {
 
@@ -6,11 +7,13 @@ function testing() {
 
             localStorage.setItem("test", e.target.parentElement.parentElement.innerHTML);
 
-            window.location.href="scoreboard.html";
+            window.location.href="scoreBoard.html";
         });
 
     });
 
 };
+
+
 
 
