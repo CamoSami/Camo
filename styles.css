@@ -9,9 +9,11 @@ body {
     width: 100vw;
     display: grid;
     grid-template-columns: auto repeat(4, 1fr);
+    overflow: hidden;
 }
 .header{
     text-decoration: none;
+    width: 100%;
     grid-column: span 5;
     color: white;
     display: grid;
@@ -87,7 +89,6 @@ body {
 .content{
     grid-column: span 4;
     margin: 0 auto 0 auto;
-    max-width: 880px;
 }
 
 

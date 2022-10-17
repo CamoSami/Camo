@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="checkScore-res.css">
     <link rel="stylesheet" type="text/css" href="../styles.css">
-    <title>Hệ Thống Quản Lý Điểm</title>
+    <title>Score Management System</title>
     <link rel="icon" type="image/png" href="image/logo.png"/>
     <script src="take.js"></script>
 </head>
 <body>
-
     <!--Form-->
     <div class="container">
         <div class="header">
-            <button id="button">>></button>
+            <button id="button">></button>
             
             <script>
                 const button = document.querySelector("#button");
@@ -28,46 +27,45 @@
                 });
             </script>
             
-            <h1 class="title">Trường ĐH Giao Thông Vận Tải</h1>
-            <h1 class="title">HỆ THỐNG QUẢN LÝ ĐIỂM</h1>
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
         </div>
         
         <div class="sidebar">
            
             <nav class="navlinks">
                 <div class="mainchoice">
-                    <a href="../index.html">Trang Chủ</a>
+                    <a href="../index.html">Home</a>
                 </div>
                 <div class="mainchoice">
-                    <a href="checkScore.html">Quản Lý Điểm</a>
+                    <a href="checkScore.html">Management</a>
                 </div>
                 <div class="subchoice">
-                    <a href="#">Nhập Điểm</a>
+                    <a href="#">Insert</a>
                 </div>
                 <div class="subchoice">
-                    <a href="checkScore.html">Xem Điểm</a>
+                    <a href="checkScore.html">Search</a>
                 </div>
                 <div class="mainchoice">
-					<a href="../information/information.html">Thông Tin</a>
+					<a href="../information/information.html">Information</a>
 				</div>
                 <div class="mainchoice">
-					<a href="#">Tài Khoản</a>
-				</div>
+					<a href="#">Account</a>
             </nav>
         </div>
         <!--Form-->
 
         <div class="content">
             <div class="scoreBoard minimized">
-                <h1 class="mySearch">Bảng Điểm</h1>
+                <h1 class="mySearch">Scoreboard</h1>
                 <table cellspacing="0" border="1">
                     <tr>
-                        <th>STT</th>
-                        <th>Họ và Tên</th>
-                        <th>Mã SV</th>
-                        <th>Khoá</th>
-                        <th>Ngành</th>
-                        <th>Lớp</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Generation</th>
+                        <th>Department</th>
+                        <th>Class</th>
                     </tr>
                     <tr>
 
@@ -75,28 +73,28 @@
                 </table>
             </div>
 
-            <h2 style="text-align:center">Điểm Thi</h2>
+            <h2 style="text-align:center">Courses</h2>
             
             <div class="scoreBoard medium">
                 <table cellspacing="0" border="1">
                     <tr>
-                        <th>STT</th>
-                        <th>Mã Học Phần</th>
-                        <th>Tên Học Phần</th>
-                        <th>Số TC</th>
-                        <th>Lần Học</th>
-                        <th>Lần Thi</th>
-                        <th>Điểm Thứ</th>
-                        <th>Là Điểm Tổng Kết Môn</th>
-                        <th>Đánh Giá</th>
-                        <th>ĐQT</th>
-                        <th>THI</th>
-                        <th>TKHP</th>
+                        <th>ID</th>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Course Load</th>
+                        <th>Times Learned</th>
+                        <th>Times Tested</th>
+                        <th>Grade Order</th>
+                        <th>Is The Final Grade?</th>
+                        <th>Conclusion</th>
+                        <th>Process Grade</th>
+                        <th>Exam Grade</th>
+                        <th>Final Grade</th>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>PE0.002.1</td>
-                        <td>Giáo dục thể chất F2</td>
+                        <td>Physical Education F2</td>
                         <td>1</td>
                         <td>1</td>
                         <td>1</td>
@@ -110,7 +108,7 @@
                     <tr>
                         <td>2</td>
                         <td>IT1.103.3</td>
-                        <td>Kỹ thuật lập trình</td>
+                        <td>Programming Technique</td>
                         <td>3</td>
                         <td>1</td>
                         <td>1</td>
@@ -124,7 +122,7 @@
                     <tr>
                         <td>3</td>
                         <td>BS0.001.2</td>
-                        <td>Giải tích 1</td>
+                        <td>Mathematical Analysis 1</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -138,7 +136,7 @@
                     <tr>
                         <td>4</td>
                         <td>PS0.002.2</td>
-                        <td>Kinh tế chính trị Mác- Lênin</td>
+                        <td>Lenin's Political Economy</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -152,7 +150,7 @@
                     <tr>
                         <td>5</td>
                         <td>PS0.001.3</td>
-                        <td>Triết học Mác- Lênin</td>
+                        <td>Lenin's Philosophy</td>
                         <td>3</td>
                         <td>1</td>
                         <td>1</td>
@@ -166,7 +164,7 @@
                     <tr>
                         <td>6</td>
                         <td>BS0.101.3</td>
-                        <td>Đại số tuyến tính</td>
+                        <td>Linear Algebra</td>
                         <td>3</td>
                         <td>1</td>
                         <td>1</td>
@@ -180,7 +178,7 @@
                     <tr>
                         <td>7</td>
                         <td>DE0.003.1</td>
-                        <td>Giáo dục quốc phòng- an ninh 3</td>
+                        <td>National Defence Education 3</td>
                         <td>1</td>
                         <td>1</td>
                         <td>1</td>
@@ -194,7 +192,7 @@
                     <tr>
                         <td>8</td>
                         <td>BS0.201.3</td>
-                        <td>Vật lý</td>
+                        <td>Physics</td>
                         <td>3</td>
                         <td>1</td>
                         <td>1</td>
@@ -208,7 +206,7 @@
                     <tr>
                         <td>9</td>
                         <td>DE0.004.2</td>
-                        <td>Giáo dục quốc phòng- an ninh 4</td>
+                        <td>National Defence Education 4</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -222,7 +220,7 @@
                     <tr>
                         <td>10</td>
                         <td>BS0.105.3</td>
-                        <td>Xác suất thống kê</td>
+                        <td>Statistic Probability</td>
                         <td>3</td>
                         <td>1</td>
                         <td>1</td>
@@ -236,7 +234,7 @@
                     <tr>
                         <td>11</td>
                         <td>PS0.003.2</td>
-                        <td>Chủ nghĩa xã hội khoa học</td>
+                        <td>Science of Socialism</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -250,7 +248,7 @@
                     <tr>
                         <td>12</td>
                         <td>ANHA1.4</td>
-                        <td>Tiếng Anh A1</td>
+                        <td>English A1</td>
                         <td>4</td>
                         <td>1</td>
                         <td>1</td>
@@ -264,7 +262,7 @@
                     <tr>
                         <td>13</td>
                         <td>IT1.002.2</td>
-                        <td>Bảo trì hệ thống</td>
+                        <td>System Maintenance</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -278,7 +276,7 @@
                     <tr>
                         <td>14</td>
                         <td>IT0.004.2</td>
-                        <td>Tin học đại cương</td>
+                        <td>General Study of IT</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -292,7 +290,7 @@
                     <tr>
                         <td>15</td>
                         <td>DE0.002.2</td>
-                        <td>Giáo dục quốc phòng- an ninh 2</td>
+                        <td>National Defence Education 2</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -306,7 +304,7 @@
                     <tr>
                         <td>16</td>
                         <td>ANHA2.4</td>
-                        <td>Tiếng  Anh A2</td>
+                        <td>English A2</td>
                         <td>4</td>
                         <td>1</td>
                         <td>1</td>
@@ -320,7 +318,7 @@
                     <tr>
                         <td>17</td>
                         <td>IT1.001.3</td>
-                        <td>Nhập môn ngành CNTT</td>
+                        <td>Introduction to IT</td>
                         <td>3</td>
                         <td>1</td>
                         <td>1</td>
@@ -334,7 +332,7 @@
                     <tr>
                         <td>18</td>
                         <td>BS0.002.2</td>
-                        <td>Giải tích 2</td>
+                        <td>Mathematical Analysis 2</td>
                         <td>2</td>
                         <td>1</td>
                         <td>1</td>
@@ -348,7 +346,7 @@
                     <tr>
                         <td>19</td>
                         <td>PE0.001.1</td>
-                        <td>Giáo dục thể chất F1</td>
+                        <td>Physical Education F1</td>
                         <td>1</td>
                         <td>1</td>
                         <td>1</td>
@@ -362,7 +360,7 @@
                     <tr>
                         <td>20</td>
                         <td>BS0.601.4</td>
-                        <td>Tiếng Anh B1</td>
+                        <td>English B1</td>
                         <td>4</td>
                         <td>1</td>
                         <td>1</td>
@@ -376,7 +374,7 @@
                     <tr>
                         <td>21</td>
                         <td>DE0.001.3</td>
-                        <td>Giáo dục quốc phòng- an ninh 1</td>
+                        <td>National Defence Education 1</td>
                         <td>3</td>
                         <td>1</td>
                         <td>1</td>
@@ -390,17 +388,17 @@
                 </table>
             </div>
 
-            <h2 style="text-align:center">Bảng Rèn Luyện</h2>
+            <h2 style="text-align:center">Practise</h2>
             <div class="scoreBoard minimized">
                 
                 <table cellspacing="0" border="1">
                     <tr>
-                        <th colspan="4">Điểm T/C 1</th>
-                        <th colspan="5">Điểm T/C 2</th>
-                        <th colspan="4">Điểm T/C 3</th>
-                        <th colspan="4">Điểm T/C 4</th>
-                        <th colspan="4">Điểm T/C 5</th>
-                        <th>Tổng</th>
+                        <th colspan="4">Criteria 1</th>
+                        <th colspan="5">Criteria 2</th>
+                        <th colspan="4">Criteria 3</th>
+                        <th colspan="4">Criteria 4</th>
+                        <th colspan="4">Criteria 5</th>
+                        <th>Total</th>
                     </tr>
                     <tr>
                         <td>a</td>
@@ -453,8 +451,8 @@
             </div>
 
             <div class="returnInsertScore">
-                <button class="fix">Sửa Điểm</button>
-                <button class="delete">Xoá Điểm</button>
+                <button class="fix">Fix</button>
+                <button class="delete">Delete</button>
             </div>
         </div>
     </div>
@@ -473,19 +471,19 @@
 
         $(".delete").on('click', function() {
             Swal.fire({
-                title: 'Bạn có chắc chắn không?',
-                text: 'Bạn sẽ không quay lại được đâu',
+                title: 'Are you sure?',
+                text: 'This record will be PERMANENTLY deleted!',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Ya',
-                cancelButtonText: 'Nôu',
+                cancelButtonText: 'Nou',
                 confirmButtonColor: 'rgb(210, 30, 30)',
                 dangerMode: true,
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(
-                        'Hoàn thành!',
-                        'Điểm này đã được xoá :<',
+                        'Success!',
+                        'This record has been deleted :<',
                         'success'
                     ).then(function() {
                         window.location.href= "checkScore.html"
@@ -493,8 +491,8 @@
                 }
                 else if (result.isDismissed) {
                     Swal.fire(
-                        'Hoàn thành!',
-                        'Điểm này chưa được xoá :>',
+                        'Aborted!',
+                        'This record has been kept :>',
                     )
                 }
             })

@@ -4,7 +4,7 @@
     }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
     .container {
         grid-template-rows: 100px 1fr;
     }
@@ -33,7 +33,6 @@
         height: 40px;
     }
     .content {
-        max-width: 880px;
         width: 65vw;
     }
     .returnInsertScore button {
@@ -49,7 +48,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1080px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .container {
         grid-template-rows: 80px 1fr;
     }
