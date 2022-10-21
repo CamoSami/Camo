@@ -48,28 +48,35 @@ function courseCreate(id) {
             
 
             des = document.querySelector("table.inputForCourse tbody tr:last-of-type td:last-of-type input");
-            if (i == 2) des.value = subject;
-
-            if (i <= 2 || i == 8) {
-
+            if (i <= 1) {
                 des.setAttribute("type", "text");
                 des.setAttribute("oninput", "CorrectText("+forLocateElement+")");
                 des.setAttribute("onblur", "CorrectText("+forLocateElement+")");
-
+                des.setAttribute("onfocus", "tipCourseID()");
             }
-            else {
-
+            else if (i <= 2) {
+                des.value = subject;
+                des.setAttribute("type", "text");
+                des.setAttribute("oninput", "CorrectText("+forLocateElement+")");
+                des.setAttribute("onblur", "CorrectText("+forLocateElement+")");
+                des.setAttribute("onfocus", "tipCourseName()");
+            }
+            else if (i <= 7) {
                 des.setAttribute("type", "number");
                 des.setAttribute("oninput", "CorrectDigit("+forLocateElement+")");
                 des.setAttribute("onblur", "CorrectDigit("+forLocateElement+")");
-
+                des.setAttribute("onfocus", "tipNumber()");
             }
-
-            if (i <= 1) des.setAttribute("onfocus", "tipCourseID()");
-            else if (i <= 2) des.setAttribute("onfocus", "tipCourseName()");
-            else if (i <= 7) des.setAttribute("onfocus", "tipNumber()");
-            else if (i <= 8) des.setAttribute("onfocus", "tipFinal()");
-            else des.setAttribute("onfocus", "tipScore()");
+            else if (i <= 8) {
+                des.setAttribute("type", "text");
+                des.setAttribute("oninput", "correctFinal("+forLocateElement+")");
+                des.setAttribute("onfocus", "tipFinal()");
+            }
+            else {
+                des.setAttribute("type", "number");
+                des.setAttribute("oninput", "correctScore("+forLocateElement+")");
+                des.setAttribute("onfocus", "tipScore()");
+            }
 
         });
 

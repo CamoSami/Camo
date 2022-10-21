@@ -214,7 +214,7 @@ function setDataToFix() {
         localStorage.removeItem("dataCourseLimit");
         localStorage.removeItem("dataPractise");
 
-        localStorage.removeItem("checkFix");        
+        localStorage.removeItem("checkFix");
 
     }
 
