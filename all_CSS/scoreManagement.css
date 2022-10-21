@@ -1,0 +1,166 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}   
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    overflow: hidden;
+}
+.header{
+    text-decoration: none;
+    width: 100%;
+    grid-column: span 5;
+    color: white;
+    display: grid;
+    background-color: #002395;
+}
+.header .title:first-of-type {
+    grid-column: span 1;
+    align-self: center;
+    margin-left: 6%;
+}
+.header .title:last-of-type {
+    grid-column: span 1;
+    align-self: center;
+    margin-left: auto;
+    margin-right: calc(6% + 6px);
+}
+.article, .sidebar {
+    grid-row: 1fr;
+}
+.sidebar {
+    background-color: #3e3e3e;
+}
+#button {
+    display: none;
+    background-color:#d9d9d9;
+    border: none;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: auto;
+    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+}
+#button:hover {
+    width: 56px;
+    height: 56px;
+    font-size: 36px;
+}
+.navlinks {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.navlinks div.mainchoice > a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.navlinks div.subchoice > a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.navlinks .mainchoice{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+}
+.navlinks .subchoice{
+    padding: 15px 0 15px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    background-color: #5f5f5f;
+}
+.navlinks div.mainchoice:hover{
+    background-color: black;
+}
+.navlinks div.subchoice:hover{
+    background-color: rgb(152, 152, 152);
+}
+.content{
+    grid-column: span 4;
+}
+
+
+
+/* Form */
+
+
+
+h1.mySearch {
+    text-align: center;
+    font-size: 36px;
+}
+.search button{
+    position: relative;
+    cursor: pointer;
+    height: 6vh;
+    width: calc(20% - 12px);
+}
+.search input, .search > label{
+    margin: .4rem 0;
+    width: 65%;
+    height: 6vh;
+} 
+select#mySearch {
+    width: 15%;
+    height: 6vh;
+}
+.scoreBoard > table {
+    width: 100%;
+}
+.scoreBoard table tr td{
+    border-bottom: none;
+    border-top: none;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+table tr td{
+    font-size: 14px;
+}
+.scoreBoard.extended{
+    max-height: 65vh;
+    overflow-y: scroll;
+}
+.scoreBoard.medium{
+    max-height: 165px;
+    overflow-y: scroll;
+}
+.scoreBoard.minimized{
+    max-height: 25%;
+}
+.scoreBoard table tr:first-of-type th{
+    background: #002395;
+    color: white;
+}
+.scoreBoard.extended table tr:nth-child(2n + 1), .scoreBoard.medium table tr:nth-child(2n + 1), .scoreBoard.minimized table tr:nth-child(2n + 1){
+    background:#d9d9d9;
+}
+div.button{
+    padding-top: 8px;
+    margin: 0 0 0 auto;
+}
+div.button button {
+    float: right;
+    margin-left: 4px;
+    text-align: center;
+    background-color: #5f5f5f;
+    color:white;
+    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    cursor: pointer;
+}
+div.button button:hover {
+    background-color:rgb(152, 152, 152);
+}

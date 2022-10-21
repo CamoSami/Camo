@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="scoreManagement/checkScore-res.css">
     <title>Hệ Thống Quản Lý Điểm</title>
     <link rel="icon" type="image/png" href="image/logo.png"/>
 </head>
@@ -13,24 +14,45 @@
     <!--Form-->
     <div class="container">
         <div class="header">
-            <h1 class="title">Trường ĐH Giao Thông Vận Tải</h1>
-            <h1 class="title">HỆ THỐNG QUẢN LÝ ĐIỂM</h1>
+            <button id="button">></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
+                });
+            </script> 
+            
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
         </div>
         <div class="sidebar">
+
             <nav class="navlinks">
-                <div class="mainchoice">
-                    <a href="#">Trang Chủ</a>
+                <div class="mainchoice" style="text-decoration:underline">
+                    <a href="index.html">Home</a>
                 </div>
                 <div class="mainchoice">
-                    <a href="scoreManagement/checkScore.html">Quản Lý Điểm</a>
+                    <a href="scoreManagement/checkScore.html">Management</a>
+                </div>
+                <div class="subchoice">
+                    <a href="insert.html">Insert</a>
+                </div>
+                <div class="subchoice">
+                    <a href="scoreManagement/checkScore.html">Search</a>
                 </div>
                 <div class="mainchoice">
-					<a href="information/information.html">Thông Tin</a>
+					<a href="information.html">Information</a>
 				</div>
                 <div class="mainchoice">
-					<a href="#">Tài Khoản</a>
-				</div>
+					<a href="#">Account</a>
+                </div>
             </nav>
+
         </div>
         <!--Form-->
 

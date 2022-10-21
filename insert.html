@@ -1,0 +1,228 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="all_CSS/insert.css">
+    <link rel="stylesheet" type="text/css" href="all_CSS/insertRes.css">
+    <title>Score Management System</title>
+    <link rel="icon" type="image/png" href="all_IMG/logo.png">
+    <script src="all_JS/inputPractise.js"></script>
+    <script src="all_JS/inputCourse.js"></script>
+    <script src="all_JS/inputStudent.js"></script>
+    <script src="all_JS/uponSubmit.js"></script>
+    <script src="all_JS/take.js"></script>
+
+    <!--        JQuery, for library SweetAlert2         -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous">
+    </script>
+
+    <!--        SweetAlert2, only for cosmetic uses     -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="button">></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+    
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+    
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
+                });
+            </script>
+            
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
+            
+        </div>
+        
+        <div class="sidebar">
+           
+            <nav class="navlinks">
+                <div class="mainchoice">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="mainchoice">
+                    <a href="scoreManagement/checkScore.html" style="text-decoration:underline">Management</a>
+                </div>
+                <div class="subchoice">
+                    <a href="insert.html" style="text-decoration:underline">Insert</a>
+                </div>
+                <div class="subchoice">
+                    <a href="scoreManagement/checkScore.html">Search</a>
+                </div>
+                <div class="mainchoice">
+					<a href="information.html">Information</a>
+				</div>
+                <div class="mainchoice">
+					<a href="#">Account</a>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="content">
+            <div class="scoreBoard minimized">
+                <form class="inputForInsert">
+                    <table action="" cellspacing="0" border="1">
+                        <tr>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                            <th>Generation</th>
+                            <th>Department</th>
+                            <th>Class</th>
+                        </tr>
+                        <tr class="forInsert">
+                            <td><input type="text" oninput="checkInputName(1, 0)"  onblur="checkInputName(1, 1)"></td>
+                            <td><input type="text" oninput="checkInputStuID(1, 0)" onblur="checkInputStuID(1, 1)"></td>
+                            <td><input type="text" oninput="checkInputGen(1, 0)" onblur="checkInputGen(1, 1)"></td>
+                            <td><input type="text" oninput="checkInputDep(1, 0), updateClass()" onblur="checkInputDep(1, 1)"></td>
+                            <td><input type="text" oninput="checkInputClass(1, 0)" onblur="checkInputClass(1, 1)"></td>
+                        </tr>
+                    </table>
+                </form>
+                
+            </div>
+            <div class="button">
+                <button class="normal check" style="display:block">Check</button>
+                <button class="normal reset" style="display:none">Reset</button>
+            </div>
+            <button class="warning student" style="display:block"></button>
+
+            <script>
+                Validation();
+
+                Reset();
+            </script>
+
+
+            <div style="text-align:center" class="appearLater scoreBoardHeader">Courses</div>
+            <div class="scoreBoard medium appearLater">
+
+                <form action="" id="">
+                    <table cellspacing="0" border="1" class="inputForCourse" class="appearLater">
+                        <tbody class="appearLater">
+                            <tr class="appearLater">
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Course Load</th>
+                                <th>Times Learned</th>
+                                <th>Times Tested</th>
+                                <th>Grade Order</th>
+                                <th>Is The Final Grade?</th>
+                                <th>Final</th>
+                                <th>Process Grade</th>
+                                <th>Exam Grade</th>
+                                <th>Final Grade</th>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                            </tr>
+                            -->
+                        </tbody>
+                        
+                    </table>
+                </form>
+            </div>   
+            <button class="tip course"style="display:none"></button>
+
+            <div style="text-align:center" class="appearLater scoreBoardHeader">Practise</div>
+            <div class="scoreBoard minimized appearLater">
+                <form>
+                    <table cellspacing="0" border="1" class="appearLater">
+                        <tr>
+                            <th colspan="4">Criteria 1</th>
+                            <th colspan="5">Criteria 2</th>
+                            <th colspan="4">Criteria 3</th>
+                            <th colspan="4">Criteria 4</th>
+                            <th colspan="4">Criteria 5</th>
+                            <th rowspan="2">Total</th>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                            <td>a</td>
+                            <td>b1</td>
+                            <td>b2</td>
+                            <td>b3</td>
+                            <td>b4</td>
+                            <td>a1</td>
+                            <td>a2</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>a</td>
+                            <td>b1</td>
+                            <td>b2</td>
+                            <td>c</td>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr class="practiseInput">
+                            <!--
+                                <td><input type="number" oninput="calTotal(), checkInput(1)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(2)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(3)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(4)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(5)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(6)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(7)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(8)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(9)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(10)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(11)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(12)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(13)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(14)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(15)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(16)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(17)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(18)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(19)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(20)"></td>
+                                <td><input type="number" oninput="calTotal(), checkInput(21)"></td>
+                            -->
+                            
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>               
+            </div>
+            <div class="button appearLater">
+                <button class="normal submit" style="display:block">Submit</button>
+            </div>
+
+            <script>
+
+                Submit();
+
+                setDataToFix();
+
+            </script>
+        </div>
+    </div>
+    
+
+
+</body></html>
