@@ -13,9 +13,10 @@ function Submit() {
         var selectAll = document.querySelectorAll(".inputForCourse tbody tr td input");
 
         selectAll.forEach((input) => {
-            forInputCheck++;
+        forInputCheck++;
 
             if (input.value.length == 0) {
+
                 vastTest = 0;
 
                 //          Change background and give an attribute to test if it is still empty
@@ -23,6 +24,7 @@ function Submit() {
                 input.parentElement.setAttribute("oninput", "checkInputCourse("+forInputCheck+")");
 
                 console.log(input.parentElement);
+
             }
 
         })

@@ -4,60 +4,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="scoreManagement/checkScore-res.css">
-    <title>Hệ Thống Quản Lý Điểm</title>
-    <link rel="icon" type="image/png" href="image/logo.png"/>
-</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="all_CSS/index.css">
+    <title>Score Management System</title>
+    <link rel="icon" type="image/png" href="all_IMG/logo.png"/>
+   </head>
 <body>
+    <div id="container">
+    <div id="main">
 
-    <!--Form-->
-    <div class="container">
-        <div class="header">
-            <button id="button">></button>
-            
-            <script>
-                const button = document.querySelector("#button");
+        <div id="header">
+            <div class="logo">
+                <div class="header-img">
+                    <img src="all_IMG/269966741_603035437437038_3296972557539831429_n.png" alt="logo">
+    
+                </div>
+                <div class="header-utc">
+                    <h2 class="titleh2">Trường ĐH Giao Thông Vận Tải</h2>
+                    <p class="titleh3">UNIVERSITY OF TRANSPORT AND COMMUNICATIONS</p>
+                </div>
+            </div>
 
-                button.addEventListener('click', () => {
-                    document.querySelector(".sidebar").classList.toggle("active");
+            <div>
+                <p class="titleh1">HỆ THỐNG QUẢN LÝ ĐIỂM</p>
 
-                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
-                    else button.innerHTML = ">";
-                });
-            </script> 
-            
-            <h1 class="title">University of Transport and Communication</h1>
-            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
+            </div>
+           
         </div>
-        <div class="sidebar">
 
-            <nav class="navlinks">
-                <div class="mainchoice" style="text-decoration:underline">
-                    <a href="index.html">Home</a>
-                </div>
-                <div class="mainchoice">
-                    <a href="scoreManagement/checkScore.html">Management</a>
-                </div>
-                <div class="subchoice">
-                    <a href="insert.html">Insert</a>
-                </div>
-                <div class="subchoice">
-                    <a href="scoreManagement/checkScore.html">Search</a>
-                </div>
-                <div class="mainchoice">
-					<a href="information.html">Information</a>
-				</div>
-                <div class="mainchoice">
-					<a href="#">Account</a>
-                </div>
-            </nav>
+        <ul id="nav">
 
-        </div>
-        <!--Form-->
-
+            <li><a href="index.html">INDEX</a></li>
+            <li >
+                <a href="scoreManagement.html" >
+                    MANAGEMENT <i class="fa fa-caret-down"></i>
+                    <ul class="subnav">
+                        <li><a href="insertScore.html">Insert Record</a></li>
+                        <li><a href="scoreManagement.html">Search Record</a></li>
+                    </ul>
+                </a>
+            <li><a href="information.html">INFORMATION</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+           
+        </ul>
         
-    </div>
+        </div>
+            <div id="slider">
+                <img id="photo" src="all_IMG/0.jpg" alt="Ảnh">
+            <div class="transfer">
+                <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+                <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+            </div>
+        </div>
+        <script>
+            var arr_photo=[
+                "all_IMG/0.jpg",
+                "all_IMG/1.png",
+                "all_IMG/2.jpg",
+                "all_IMG/3.jpg",
+                
+            ]
+            var index=1;
+            next =function(){
+                index++;
+                if(index >=arr_photo.length)index=0;
+                var photo=document.getElementById("photo");
+                photo.src=arr_photo[index];
+                // alert("next");
+            }
+            function prev(){
+                index--;
+                if(index<0)index=arr_photo.length-1;
+                var photo=document.getElementById("photo");
+                photo.src=arr_photo[index];
+            }
+            setInterval("next()",3000)
+        </script>
+        <div id="content">
+             <div class="information">
+                <h1>DỊCH VỤ CHO GIẢNG VIÊN</h1>
+              <img src="all_IMG//310374688_488633216644904_8187264239159228886_n.jpg" alt="Ảnh">
+              <div class="one">
+              <div  class="item" >
+                <a href="#content">
+                <p>giảng dạy</p>
+                <P>Thời khoa biểu, phân công giảng dạy, điểm danh</P>
+            </a>  
+            </div>
+              <div class="item">
+                <a href="#content">
+                <p>khoa học công nghệ</p>
+                <p>Bài báo, đề tài, sách, sáng chế, lý lịch khoa học</p>
+            </a>
+              </div>
+              <div class="item">
+                <a href="#content">
+                <p>cơ sở vật chất</p>
+                <p>Danh mục mặt bằng, thiết bị, trạng thái</p>
+            </a>  
+            </div>
+              <div class="item">
+                <a href="#content">
+                <p>học viên</p>
+                <p>Tra cứu thông tin học viên</p>
+            </a>  
+            </div>
+            </div>
+            <div class="two">
+              <div class="item">
+                <a href="#content">
+                <p>hướng dẫn</p>
+                <p>Phân công, danh sách ĐA/ĐATN, luận văn, Luận án</p>
+            </a>  
+            </div>
+              <div class="item">
+                <a href="#content">
+                <p>tổ chức cán bộ</p>
+                <p>Thông tin đơn vị, cán bộ, chức vụ, hệ số, lương</p>
+            </a>  
+            </div>
+              <div class="item">
+                <a href="#content">
+                <p>hợp tác đối ngoại</p>
+                <p>Đối tác, dự án, khóa đào tạo, trao đổi CB/SV, thực tập</p>
+            </a>  
+            </div>
+              <div class="item">
+                <a href="#content">
+                <p>dashboard</p>
+                <p>Bảng chỉ số thống kê, tổng hợp số liệu về các lĩnh vực</p>
+            </a> 
+            </div>
 
+            </div>
+             </div>
+        </div>
+    <!-- <div id="footer">
+        <div class="containerutc">
+            <div class="col-1 column">
+                <div class="logo">
+                    <img src="../img2/269966741_603035437437038_3296972557539831429_n.png" alt="logo">
+                    <h1>Trường Đại Học Giao Thông Vận Tải</h1>
+                </div>
+                <div class="contact">
+                    <div class="cont-1">
+                        <p class="item">Địa chỉ: Số 3 phố Cầu Giấy, P.L&#225;ng Thượng, Q.Đống Đa, H&#224; Nội.</p>
+                        <p class="item">Điện thoại: <a href="tel:(84.24) 37663311" style="color:#fff">(84.24) 37663311</a> - Fax: (84.24)37669613</p>
+                        <p class="item">Email: <a href="mailto:dhgtvt@utc.edu.vn" style="color:#fff">dhgtvt@utc.edu.vn</a></p>
+                    </div>
+                    <div class="cont-2">
+                        <h3 class="item">PH&#194;N HIỆU TẠI TH&#192;NH PHỐ HỒ CH&#205; MINH</h3>
+                        <p class="item">Địa chỉ: 450-451 Đường L&#234; Văn Việt, Phường Tăng Nhơn Ph&#250; A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Ch&#237; Minh</p>
+                        <p class="item">Điện thoại: <a href="tel:(84.28) 38966798" style="color:#fff">(84.28) 38966798</a> - Fax: (84.28)38964736</p>
+                        <p class="item">Email: <a href="mailto:info@utc2.edu.vn" style="color:#fff">info@utc2.edu.vn</a></p>
+                        <p class="item">website: <a href="http://phanhieu.utc.edu.vn" title="PH&#194;N HIỆU TẠI TH&#192;NH PHỐ HỒ CH&#205; MINH" style="color:#fff">http://phanhieu.utc.edu.vn</a></p>
+                    </div>
+                
+                </div>
+                <div class="socials">
+                    <h6 class="item">Theo dõi UTC</h6>
+                                <div class="social">
+                    <a class="item" href="https://www.facebook.com">
+                        <i  class="fab fa-facebook-f"></i>
+                    </a>
+                                <a class="item" href="https://youtube.com">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                        <a class="item" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                            <a class="item" href="https://plus.google.com/">
+                        <i class="fab fa-google-plus"></i>
+                    </a>
+                </div>
+
+                </div>
+            </div>
+            <div class="col-2 column">
+                <h3>Tiện ích</h3>
+                <ul class="exts">
+                    <li class="nav-item"><a href="#">Văn bản</a></li>
+                    <li class="nav-item"><a href="#">Video</a></li>
+                    <li class="nav-item"><a href="#" >Thư viện ảnh</a></li>
+                    <li class="nav-item"><a href="#" >Lịch c&#244;ng t&#225;c</a></li>
+                    <li class="nav-item"><a href="#">Đội ngũ giảng vi&#234;n</a></li>
+                </ul>
+            
+            </div> 
+            <div class="col-3 column">
+                <h3>Truy cập nhanh</h3>
+                <ul>
+                    <li class="nav-item"><a href="#" >Thư viện</a></li>
+                    <li class="nav-item"><a href="#">Tạp ch&#237; Khoa học GTVT</a></li>
+                    <li class="nav-item"><a href="#">Nh&#224; trường điện tử (nội bộ)</a></li>
+                    <li class="nav-item"><a href="#">Văn ph&#242;ng điện tử(nội bộ)</a></li>
+                    <li class="nav-item"><a href="#">Đăng k&#253; học</a></li>
+                    <li class="nav-item"><a href="#">Bộ Gi&#225;o dục &amp; Đ&#224;o tạo</a></li>
+                </ul>
+                
+            </div>
+            <div class="col-4 column">
+            <div class="map">
+                <h6 class="item">Trường Đại học Giao thông vận tải</h6>
+                <iframe class="item" allowfullscreen=""   loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
+                <h6 class="item">Trường Đại học Giao thông vận tải - Phân hiệu Hồ Chí Minh</h6>
+                <iframe class="item" allowfullscreen=""   loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="license">
+            <p >@2021 Bản quyền thuộc Trường Đại học Giao thông vận tải </p>
+
+        </div>
+
+    </div> -->
+</div> 
+     
 </body>
 </html>

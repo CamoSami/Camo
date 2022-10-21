@@ -8,9 +8,10 @@ function getDataToSB() {
             //          LocalStorage persists as long as the web browser is opened, so it will be used to transfer data between HTML files
             localStorage.setItem("dataFromSearch", e.target.parentElement.parentElement.innerHTML);
 
-            //console.log(dataFromSearch[0]);
+            // console.log(e.target.parentElement.parentElement.innerHTML);
+            var x = e.target.parentElement.parentElement.querySelector("td:nth-child(2)").innerHTML;
 
-            window.location.href = "scoreBoard.html";
+            window.location.href = "scoreManagement/"+x+".html";
 
         });
 
@@ -115,7 +116,7 @@ function getDataToFix() {
 
     localStorage.setItem("dataPractise", practiseValue);
 
-    window.location.href = "../insert.html";
+    window.location.href = "../insertScore.html";
 
 };
 

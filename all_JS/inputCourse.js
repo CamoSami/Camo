@@ -12,6 +12,7 @@ DepSubjects[2] = [
 
 
 function courseCreate(id) {
+
     +id--;
     // alert(id);
 
@@ -50,21 +51,21 @@ function courseCreate(id) {
             des = document.querySelector("table.inputForCourse tbody tr:last-of-type td:last-of-type input");
             if (i <= 1) {
                 des.setAttribute("type", "text");
-                des.setAttribute("oninput", "CorrectText("+forLocateElement+")");
-                des.setAttribute("onblur", "CorrectText("+forLocateElement+")");
+                des.setAttribute("oninput", "correctText("+forLocateElement+")");
+                des.setAttribute("onblur", "correctText("+forLocateElement+")");
                 des.setAttribute("onfocus", "tipCourseID()");
             }
             else if (i <= 2) {
                 des.value = subject;
                 des.setAttribute("type", "text");
-                des.setAttribute("oninput", "CorrectText("+forLocateElement+")");
-                des.setAttribute("onblur", "CorrectText("+forLocateElement+")");
+                des.setAttribute("oninput", "correctText("+forLocateElement+")");
+                des.setAttribute("onblur", "correctText("+forLocateElement+")");
                 des.setAttribute("onfocus", "tipCourseName()");
             }
             else if (i <= 7) {
                 des.setAttribute("type", "number");
-                des.setAttribute("oninput", "CorrectDigit("+forLocateElement+")");
-                des.setAttribute("onblur", "CorrectDigit("+forLocateElement+")");
+                des.setAttribute("oninput", "correctDigit("+forLocateElement+")");
+                des.setAttribute("onblur", "correctDigit("+forLocateElement+")");
                 des.setAttribute("onfocus", "tipNumber()");
             }
             else if (i <= 8) {
@@ -85,9 +86,8 @@ function courseCreate(id) {
 
     else for (var temp = 0; temp < 21; temp++) {
 
-        var i = 0
+        var i = 0;
         
-
         create.appendChild(document.createElement('tr'));
         
         ref.forEach((refTH) => {
@@ -108,20 +108,20 @@ function courseCreate(id) {
 
             if (i <= 1) {
                 des.setAttribute("type", "text");
-                des.setAttribute("oninput", "CorrectText("+forLocateElement+")");
-                des.setAttribute("onblur", "CorrectText("+forLocateElement+")");
+                des.setAttribute("oninput", "correctText("+forLocateElement+")");
+                des.setAttribute("onblur", "correctText("+forLocateElement+")");
                 des.setAttribute("onfocus", "tipCourseID()");
             }
             else if (i <= 2) {
                 des.setAttribute("type", "text");
-                des.setAttribute("oninput", "CorrectText("+forLocateElement+")");
-                des.setAttribute("onblur", "CorrectText("+forLocateElement+")");
+                des.setAttribute("oninput", "correctText("+forLocateElement+")");
+                des.setAttribute("onblur", "correctText("+forLocateElement+")");
                 des.setAttribute("onfocus", "tipCourseName()");
             }
             else if (i <= 7) {
                 des.setAttribute("type", "number");
-                des.setAttribute("oninput", "CorrectDigit("+forLocateElement+")");
-                des.setAttribute("onblur", "CorrectDigit("+forLocateElement+")");
+                des.setAttribute("oninput", "correctDigit("+forLocateElement+")");
+                des.setAttribute("onblur", "correctDigit("+forLocateElement+")");
                 des.setAttribute("onfocus", "tipNumber()");
             }
             else if (i <= 8) {
@@ -154,7 +154,7 @@ function courseCreate(id) {
 
 
 //          Check input section
-function CorrectText(id) {
+function correctText(id) {
     //alert("Success");
 
     //          Calculation to take the right input with the given id
@@ -177,7 +177,7 @@ function CorrectText(id) {
     else take.parentElement.style.background = "";
 
 }
-function CorrectDigit(id) {
+function correctDigit(id) {
     
     var calcTD = id % +11;
     if (!calcTD) calcTD += +11;
@@ -230,7 +230,7 @@ function correctScore(id) {
     
     take = document.querySelector(".inputForCourse tbody tr:nth-child("+calcTR+") td:nth-child("+calcTD+") input")
 
-    if (+take.value < 0 || +take.value > 10) {
+    if (+take.value < 0 || +take.value > 10 || /^[0-9.]+$/.test(take.value) == false) {
         take.parentElement.style.background = "red";
     }
     else take.parentElement.style.background = "";

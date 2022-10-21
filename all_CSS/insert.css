@@ -138,7 +138,7 @@ div.button{
 }
 div.button .normal {
     float: right;
-    margin-left: 4px;
+    margin: 0 8px 0 4px;
     text-align: center;
     background-color: #5f5f5f;
     color:white;

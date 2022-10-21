@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../all_CSS/scoreManagement.css">
+    <link rel="stylesheet" type="text/css" href="../all_CSS/scoreManagementRes.css">
+    <title>Score Management System</title>
+    <link rel="icon" type="image/png" href="../all_IMG/logo.png"/>
+    <script src="../all_JS/take.js"></script>
+</head>
+<body>
+
+    <!--Form-->
+    <div class="container">
+        <div class="header">
+            <button id="button">></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
+                });
+            </script>
+            
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
+        </div>
+        
+        <div class="sidebar">
+           
+            <nav class="navlinks">
+                <div class="mainchoice">
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="mainchoice">
+                    <a href="../scoreManagement.html" style="text-decoration:underline">Management</a>
+                </div>
+                <div class="subchoice">
+                    <a href="../insertScore.html">Insert</a>
+                </div>
+                <div class="subchoice">
+                    <a href="../scoreManagement.html" style="text-decoration:underline">Search</a>
+                </div>
+                <div class="mainchoice">
+					<a href="../information.html">Information</a>
+				</div>
+                <div class="mainchoice">
+					<a href="#">Account</a>
+                </div>
+            </nav>
+
+        </div>
+        <!--Form-->
+
+        <div class="content">
+            <div class="scoreBoard minimized">
+                <table cellspacing="0" border="1">
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Generation</th>
+                        <th>Department</th>
+                        <th>Class</th>
+                    </tr>
+                    <tr class="studentDataReq">
+
+                    </tr>
+                </table>
+            </div>
+
+            <h2 style="text-align:center">Courses</h2>
+            
+            <div class="scoreBoard medium">
+                <table cellspacing="0" border="1" class="courseDataReq">
+                    <tr>
+                        <th>ID</th>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Course Load</th>
+                        <th>Times Learned</th>
+                        <th>Times Tested</th>
+                        <th>Grade Order</th>
+                        <th>Is The Final Grade?</th>
+                        <th>Conclusion</th>
+                        <th>Process Grade</th>
+                        <th>Exam Grade</th>
+                        <th>Final Grade</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>PE0.002.1</td>
+                        <td>Physical Education F2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>6.8</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>IT1.103.3</td>
+                        <td>Programming Technique</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>BS0.001.2</td>
+                        <td>Mathematical Analysis 1</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>9.5</td>
+                        <td>9.6</td>
+                        <td>9.6</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>PS0.002.2</td>
+                        <td>Lenins Economical Politics</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>9.3</td>
+                        <td>8.5</td>
+                        <td>8.9</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>PS0.001.3</td>
+                        <td>Lenins Philosophy</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>8.4</td>
+                        <td>7.0</td>
+                        <td>7.7</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>BS0.101.3</td>
+                        <td>Linear Algebra</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>9.5</td>
+                        <td>9.0</td>
+                        <td>9.3</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>DE0.003.1</td>
+                        <td>National Defence Education 3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>9.0</td>
+                        <td>7.0</td>
+                        <td>7.8</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>BS0.201.3</td>
+                        <td>Physics</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>9.7</td>
+                        <td>8.5</td>
+                        <td>9.1</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>DE0.004.2</td>
+                        <td>National Defence Education 4</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>6.0</td>
+                        <td>8.0</td>
+                        <td>7.2</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>BS0.105.3</td>
+                        <td>Statistic Probability</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>8.6</td>
+                        <td>7.5</td>
+                        <td>8.1</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>PS0.003.2</td>
+                        <td>Science of Socialism</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>9.5</td>
+                        <td>7.5</td>
+                        <td>8.5</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>ANHA1.4</td>
+                        <td>English A1</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>IT1.002.2</td>
+                        <td>System Maintenance</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>9.5</td>
+                        <td>7.6</td>
+                        <td>8.4</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>IT0.004.2</td>
+                        <td>General Study of IT</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>DE0.002.2</td>
+                        <td>National Defence Education 2</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>7.0</td>
+                        <td>6.0</td>
+                        <td>6.4</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>ANHA2.4</td>
+                        <td>English A2</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>9.2</td>
+                        <td>9.2</td>
+                        <td>9.2</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>IT1.001.3</td>
+                        <td>Introduction to IT</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>10</td>
+                        <td>8.2</td>
+                        <td>8.9</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>BS0.002.2</td>
+                        <td>Mathematical Analysis 2</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>8.8</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>PE0.001.1</td>
+                        <td>Physical Education F1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>PASS</td>
+                        <td>7.0</td>
+                        <td>7.0</td>
+                        <td>7.0</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>BS0.601.4</td>
+                        <td>English B1</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>DE0.001.3</td>
+                        <td>National Defence Education 1</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>PASS</td>
+                        <td>7.0</td>
+                        <td>4.0</td>
+                        <td>5.2</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2 style="text-align:center">Practise</h2>
+            <div class="scoreBoard minimized">
+                
+                <table cellspacing="0" border="1">
+                    <tr>
+                        <th colspan="4">Criteria 1</th>
+                        <th colspan="5">Criteria 2</th>
+                        <th colspan="4">Criteria 3</th>
+                        <th colspan="4">Criteria 4</th>
+                        <th colspan="4">Criteria 5</th>
+                        <th rowspan="2">Total</th>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                        <td>a</td>
+                        <td>b1</td>
+                        <td>b2</td>
+                        <td>b3</td>
+                        <td>b4</td>
+                        <td>a1</td>
+                        <td>a2</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>a</td>
+                        <td>b1</td>
+                        <td>b2</td>
+                        <td>c</td>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                    </tr>
+                    <tr class="practiseDataReq">
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>93</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="button">
+                <button class="fix">Fix</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"
+    >
+    </script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+    <script>
+       // console.log($(".returnInsertScore > .detele") + " " + document.querySelector(".returnInsertScore > .delete"));
+
+        $(".delete").on('click', function() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'This record will be PERMANENTLY deleted!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Nou',
+                confirmButtonColor: 'rgb(210, 30, 30)',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Success!',
+                        'This record has been deleted :< (no it hasnt)',
+                        'success'
+                    ).then(function() {
+                        window.location.href= "checkScore.html"
+                    });
+                }
+            })
+        });
+
+        $(".fix").on('click', function() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'Have you double checked?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Nou',
+                confirmButtonColor: 'rgb(210, 30, 30)',
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    // alert("Confirmed!");
+                    getDataToFix();
+
+                }
+            })
+        });
+
+        setDataToSB();
+
+    </script>
+</html>

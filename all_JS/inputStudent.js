@@ -475,11 +475,9 @@ function afterReset() {
     })
 
     //          Delete Practise table
-    x = document.querySelectorAll(".practiseInput td");
+    x = document.querySelector(".practiseInput");
 
-    x.forEach((td) => {
-        td.innerHTML = "";
-    })
+    x.innerHTML = "";
 
     //          Recheck inputs to reshow the warning messages
     callAll(0);

@@ -18,6 +18,8 @@ function practiseCreate() {
 
     }
 
+    create.appendChild(document.createElement("td"));
+
 }
 
 function calTotal() {
@@ -45,9 +47,11 @@ function calTotal() {
 
     if (total > 100) ret.style.background = "red";
     else ret.style.background = "";
+
 }
 
 function checkInput(index) {
+
     //alert(index);
 
     target = document.querySelector(".practiseInput td:nth-child("+index+") input");

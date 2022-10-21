@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="all_CSS/scoreManagement.css">
+    <link rel="stylesheet" type="text/css" href="all_CSS/scoreManagementRes.css">
+    <title>Score Management System</title>
+    <link rel="icon" type="image/png" href="all_IMG/logo.png"/>
+    <script src="all_JS/take.js"></script>
+    <script src="all_JS/filter.js"></script>
+</head>
+<body>
+
+    <!--Form-->
+    <div class="container">
+        <div class="header">
+            <button id="button">></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
+                });
+            </script> 
+            
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
+        </div>
+        <div class="sidebar">
+
+            <nav class="navlinks">
+                <div class="mainchoice">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="mainchoice">
+                    <a href="scoreManagement.html" style="text-decoration:underline">Management</a>
+                </div>
+                <div class="subchoice">
+                    <a href="insertScore.html">Insert</a>
+                </div>
+                <div class="subchoice">
+                    <a href="scoreManagement.html" style="text-decoration:underline">Search</a>
+                </div>
+                <div class="mainchoice">
+					<a href="information.html">Information</a>
+				</div>
+                <div class="mainchoice">
+					<a href="account.html">Account</a>
+                </div>
+            </nav>
+
+        </div>
+        <!--Form-->
+
+        <div class="content">
+
+            <div class="scoreBoard extended">
+                <table cellspacing="0" border="1">
+                <!--tr*8-->
+                    <thead>
+                        <tr>
+                            <th col-id = 1>Name</th>
+                            <th col-id = 2>Student ID</th>
+                            <th col-id = 3>Generation
+                                <select class="tableFilter" onchange="filterRows()">
+                                    <option value="all">all</option>
+                                </select>
+                            </th>
+                            <th col-id = 4>Department
+                                <select class="tableFilter" onchange="filterOfFilter()">
+                                    <option value="all">all</option>
+                                </select>
+                            </th>
+                            <th col-id = 5>Class
+                                <select class="tableFilter" onchange="filterRows()">
+                                    <option value="all">all</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">Ngô Sách Minh Hiếu</a>
+                            <td>211210292</td>
+                            <td>62</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Ngô Văn A</a></td>
+                            <td>224094258</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Ngọc B</a></td>
+                            <td>215849010</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Vũ Hồng C</a></td>
+                            <td>218603587</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 4</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đỗ Kiều D</a></td>
+                            <td>215046581</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Hồng E</a></td>
+                            <td>225546248</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 4</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đỗ Việt F</a></td>
+                            <td>211538584</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Tiến G</a></td>
+                            <td>219943197</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đặng Anh H</a></td>
+                            <td>220299480</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Phạm Thế I</a></td>
+                            <td>210712144</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 1</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Vũ Duy Mạnh J</a></td>
+                            <td>217299003</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 1</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Vũ Minh Đức K</a></td>
+                            <td>228560090</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 4</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Phi Quốc Hiệp L</a></td>
+                            <td>211223885</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Ngô Trung M</a></td>
+                            <td>223274446</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Bùi Trung N</a></td>
+                            <td>229475030</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 4</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Phạm Đình O</a></td>
+                            <td>228519637</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đặng Vũ P</a></td>
+                            <td>218978969</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 1</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Phạm Mạnh Tuấn Q</a></td>
+                            <td>216002926</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đào Quang R</a></td>
+                            <td>225188678</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Ngọc S</a></td>
+                            <td>214158503</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 4</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đào Duy T</a></td>
+                            <td>221142181</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 1</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Trần Thị U</a></td>
+                            <td>225025135</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Phạm danh V</a></td>
+                            <td>225419518</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Trịnh Doanh W</a></td>
+                            <td>227557585</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 6</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Trần Viết X</a></td>
+                            <td>228964305</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 6</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Dương Đức Y</a></td>
+                            <td>221368071</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Trần Quang Z</a></td>
+                            <td>214773222</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Phan Đông A</a></td>
+                            <td>225549117</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Trịnh Viết B</a></td>
+                            <td>214323496</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 6</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Lữ Gia C</a></td>
+                            <td>210262474</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Quang D</a></td>
+                            <td>213644519</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Đăng E</a></td>
+                            <td>222953640</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 4</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Mai Đức F</a></td>
+                            <td>214112796</td>
+                            <td>63</td>
+                            <td>Information Technology</td>
+                            <td>Information Technology 4</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nguyễn Thành G</a></td>
+                            <td>210062209</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Vũ Văn H</a></td>
+                            <td>228090866</td>
+                            <td>63</td>
+                            <td>Electrical Engineering</td>
+                            <td>Electrical Engineering 2</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Đào Mai Duy I</a></td>
+                            <td>214580771</td>
+                            <td>63</td>
+                            <td>Electronic - Communications</td>
+                            <td>Electronic - Communications 3</td>
+                        </tr>
+                        
+                    </tbody>
+                    
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        getDataToSB();
+        
+        getUniqueValueFromCol();
+    </script>
+
+
+</body>
+</html>
