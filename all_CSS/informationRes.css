@@ -1,6 +1,62 @@
+@media (min-width: 768px) {
+    .header {
+        grid-template-columns: 1fr 1fr;
+    }
+    .box-container{
+        margin: 5vh auto 0 auto;
+    }
+    .text{
+        margin: 5vh auto 0 auto;
+    }
+}
+
 @media (min-width: 1080px){
+    .container {
+        grid-template-rows: 100px 1fr;
+    }
+    .header {
+        height: 100px;
+    }
+    .sidebar {
+        width: 15vw;
+        min-width: 200px;
+    }
+    .sidebar .navlinks div.mainchoice a{
+        font-size: 24px;
+    }
+    .sidebar .navlinks div.subchoice a{
+        font-size: 20px;
+    }
+    .navlinks div.mainchoice {
+        height: 30px;
+    }
+    .navlinks div.subchoice {
+        height: 20px;
+    }
+    .navlinks div.mainchoice:hover {
+        height: 60px;
+    }
+    .navlinks div.subchoice:hover {
+        height: 40px;
+    }
+    .content {
+        width: 75vw;
+    }
+    .button button {
+        width: 120px;
+        height: 30px;
+    }
+    .button button:hover {
+        width: 160px;
+    }
+    .button {
+        width: 300px;
+        height: 40px;
+    }
+
+    /* Thong tin */
     .box{
-    	margin-left: -40px;
+    	margin-left: 10px;
     	margin-bottom: 10px;
     }
     .box-text a{
@@ -16,7 +72,7 @@
 	}
     /*nd*/
     .text{
-        margin-left: 15px;
+        width: 75vw;
     }
     .text h1{
         font-size: 35px;
@@ -38,41 +94,49 @@
 }
 
 @media (min-width: 768px) and (max-width: 1080px){
-	.header{
-        height:80px;
-    }
-    .muc{
-        height: 80px;
-    }
     .container {
         grid-template-rows: 80px 1fr;
     }
+    .header{
+        height:80px;
+    }
     .header h1{
-        font-size: 26px;
+        font-size: 18px;
     }
     .sidebar {
-        width: 18vw;
+        min-width: 150px;
     }
-    .navlinks div a{
-    	margin-top: 10px;
-	}
-    .box-container{
-    	padding: 0px;
+    .sidebar .navlinks div.mainchoice a{
+        font-size: 20px;
+    }
+    .navlinks div.mainchoice {
+        height: 30px;
+    }
+    .navlinks div.mainchoice:hover {
+        height: 60px;
+    }
+    .navlinks div.subchoice:hover {
+        height: 45px;
+    }
+
+    /* Thong tin */
+    .text{
+        width: 65vw;
     }
     .box{
-    	margin-left: -40px;
+    	margin-left: 10px;
     	margin-bottom: 10px;
     }
     .box-text a{
-    	font-size: 23px;
+    	font-size: 18px;
     }
     .box-text p+p{
     	font-size: 15px;
     	padding-top: 5px;
     }
     .box img{
-    width: 160px;
-    height: 100px;
+        width: 160px;
+        height: 100px;
 	}
     /*nd*/
     .text h1{
@@ -94,43 +158,88 @@
 }
 
 @media (max-width: 768px){
-    .header{
-        height:60px;
+
+    .box-container {
+        margin: 5vh 0 0 0;
     }
-    .muc{
-        height: 60px;
-    }
-    .container {
-        grid-template-rows: 60px 1fr;
-    }
-    .header h1{
-        font-size: 18px;
+    #button{
+        display: inline-block !important;
     }
     .sidebar {
-        width: 15vw;
+        display: flex;
+        justify-content: flex-end;
+        margin-left: -100%;
+        z-index: 1;
+        width: 0px;
+        transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
     }
-    .navlinks div a{
-    	margin-top: 20px;
-    	font-size: 15px;
-	}
-	.box-container{
-    	padding: 0px;
+    .sidebar.active {
+        width: 250px;
+        margin-left: 0;
     }
+    .navlinks {
+        width: 250px;
+        margin-left: -100%
+    }
+    .sidebar.active .navlinks{
+        margin-left: 0;
+        
+    }
+    .sidebar .navlinks .subchoice{
+        margin-left: -100%;
+        width: 230px;
+        transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    }
+    .sidebar.active .navlinks .subchoice{
+        margin-left: 0;
+    }
+    .sidebar .navlinks .mainchoice{
+        margin-left: -100%;
+        width: 200px;
+        transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    }
+    .sidebar.active .navlinks .mainchoice{
+        margin-left: 0;
+    }
+    .navlinks div.mainchoice {
+        height: 30px;
+    }
+    .navlinks div.mainchoice:hover {
+        height: 60px;
+    }
+    .header {
+        grid-template-columns: 70px 1fr 1fr;
+    }
+    .container {
+        grid-template-rows: 80px 1fr;
+    }
+    .header{
+        height:80px;
+    }
+    .header h1{
+        font-size: 14px;
+    }
+    .sidebar .navlinks div.mainchoice a{
+        font-size: 20px;
+    }
+	
+
+    /* Thong tin */
     .box{
-    	margin-left: -40px;
+    	margin-left: 10px;
     	margin-bottom: 10px;
     }
     .box-text a{
         padding-top: -10px;
-    	font-size: 12px;
+    	font-size: 18px;
     }
     .box-text p+p{
-    	font-size: 10px;
+    	font-size: 12px;
     	padding-top: 10px;
     }
     .box img{
-    width: 110px;
-    height: 100px;
+        width: 165px;
+        height: 150px;
 	}
     /*nd*/
 	.text h1{

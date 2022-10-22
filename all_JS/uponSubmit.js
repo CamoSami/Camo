@@ -78,7 +78,13 @@ function Submit() {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                afterReset();
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Maybe a cup of water?',
+                    icon: 'success',
+                }).then(function() {
+                    window.location.href= "scoreManagement.html"
+                });
 
             }
         })

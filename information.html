@@ -7,14 +7,28 @@
     <link rel="stylesheet" type="text/css" href="all_CSS/information.css">
     <link rel="stylesheet" type="text/css" href="all_CSS/informationRes.css">
     <title>Score Management System</title>
-    <link rel="icon" type="image/png" href="all_IMG/logo.png"/>
+    <link rel="icon" type="image/png" href="all_IMG/IMG_icon/logo.png"/>
 </head>
 <body>
 
     <!--Form-->
     <div class="container">
         <div class="header">
-            <h1 class="title">University of Transport and Communication - SCORE MANAGEMENT SYSTEM</h1>
+            <button id="button">></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
+                });
+            </script> 
+            
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
         </div>
         <div class="sidebar">
 
@@ -37,30 +51,30 @@
         <!--Form-->
         <div class="box-container">
                 <div class="box">
-                    <a href="truong-dai-hoc-giao-thong-van-tai-don-tan-sinh-vien-k63.html"><img src="all_IMG/1.jfif" alt="ảnh"></a>
+                    <a href="information/truong-dai-hoc-giao-thong-van-tai-don-tan-sinh-vien-k63.html"><img src="all_IMG/IMG_information/1.jfif" alt="ảnh"></a>
                     <div class="box-text">    
-                            <p><a href="truong-dai-hoc-giao-thong-van-tai-don-tan-sinh-vien-k63.html">Trường Đại học Giao thông vận tải đón tân sinh viên Khóa 63</a></p>
+                            <p><a href="information/truong-dai-hoc-giao-thong-van-tai-don-tan-sinh-vien-k63.html">Trường Đại học Giao thông vận tải đón tân sinh viên Khóa 63</a></p>
                             <p>28/09/2022 05:50 CH</p>
                     </div>
                 </div>
                 <div class="box">
-                    <a href="le-ban-giao-va-dua-vao-su-dung-he-thong-thiet-bi-tai-tro-cua-du-an-doi-moi-quan-tri-dai-hoc-tai-dong-nam-a-pursea.html"><img src="all_IMG/a1.jpg" alt="ảnh"></a>
+                    <a href="information/le-ban-giao-va-dua-vao-su-dung-he-thong-thiet-bi-tai-tro-cua-du-an-doi-moi-quan-tri-dai-hoc-tai-dong-nam-a-pursea.html"><img src="all_IMG/IMG_information/a1.jpg" alt="ảnh"></a>
                     <div class="box-text">    
-                            <p><a href="le-ban-giao-va-dua-vao-su-dung-he-thong-thiet-bi-tai-tro-cua-du-an-doi-moi-quan-tri-dai-hoc-tai-dong-nam-a-pursea.html">Lễ bàn giao và đưa vào sử dụng hệ thống thiết bị tài trợ của dự án Đổi mới Quản trị đại học tại Đông Nam Á - PURSEA</a></p>
-                            <p><br> 21/09/2022 09:29 SA</p>
+                            <p><a href="information/le-ban-giao-va-dua-vao-su-dung-he-thong-thiet-bi-tai-tro-cua-du-an-doi-moi-quan-tri-dai-hoc-tai-dong-nam-a-pursea.html">Lễ bàn giao và đưa vào sử dụng hệ thống thiết bị tài trợ </a></p>
+                            <p>21/09/2022 09:29 SA</p>
                     </div>
                 </div>
                 <div class="box">
-                    <a href="diem_chuan_2022_truong_DH_GTVT.html"><img src="all_IMG/b1.jpg" alt="ảnh"></a>
+                    <a href="information/diem_chuan_2022_truong_DH_GTVT.html"><img src="all_IMG/IMG_information/b1.jpg" alt="ảnh"></a>
                     <div class="box-text">    
-                            <p><a href="diem_chuan_2022_truong_DH_GTVT.html">Trường ĐH Giao Thông Vận Tải - HỆ THỐNG QUẢN LÝ ĐIỂM</a></p>
-                            <p><br>19/09/2022 11:11 SA</p>
+                            <p><a href="information/diem_chuan_2022_truong_DH_GTVT.html">CÔNG BỐ ĐIỂM TRÚNG TUYỂN ĐẠI HỌC HỆ CHÍNH QUY NĂM 2022</a></p>
+                            <p>19/09/2022 11:11 SA</p>
                     </div>
                 </div>
                 <div class="box">
-                    <a href="hoi-nghi-tong-ket-nam-hoc-2021-2022-va-doi-thoai-giua-lanh-dao-nha-truong-voi-dai-dien-sinh-vien.html"><img src="all_IMG/c1.jfif" alt="ảnh"></a>
+                    <a href="information/hoi-nghi-tong-ket-nam-hoc-2021-2022-va-doi-thoai-giua-lanh-dao-nha-truong-voi-dai-dien-sinh-vien.html"><img src="all_IMG/IMG_information/c1.jfif" alt="ảnh"></a>
                     <div class="box-text">    
-                            <p><a href="hoi-nghi-tong-ket-nam-hoc-2021-2022-va-doi-thoai-giua-lanh-dao-nha-truong-voi-dai-dien-sinh-vien.html">Hội nghị Tổng kết năm học 2021-2022 và Đối thoại giữa lãnh đạo Nhà trường với đại diện sinh viên</a></p>
+                            <p><a href="information/hoi-nghi-tong-ket-nam-hoc-2021-2022-va-doi-thoai-giua-lanh-dao-nha-truong-voi-dai-dien-sinh-vien.html">Hội nghị Tổng kết năm học 2021-2022 và Đối thoại giữa lãnh đạo Nhà trường với đại diện sinh viên</a></p>
                             <p><br>17/09/2022 09:15 SA</p>
                     </div>
                 </div>

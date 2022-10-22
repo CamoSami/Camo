@@ -7,16 +7,31 @@
     <link rel="stylesheet" type="text/css" href="../all_CSS/information.css">
     <link rel="stylesheet" type="text/css" href="../all_CSS/informationRes.css">
     <title>Score Management System</title>
-    <link rel="icon" type="image/png" href="../all_IMG/logo.png"/>
+    <link rel="icon" type="image/png" href="../all_IMG/IMG_icon/logo.png"/>
 </head>
 <body>
 
     <!--Form-->
     <div class="container">
         <div class="header">
-            <h1 class="title">University of Transport and Communication - SCORE MANAGEMENT SYSTEM</h1>
+            <button id="button">></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
+                });
+            </script> 
+            
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
         </div>
         <div class="sidebar">
+
             <nav class="navlinks">
                 <div class="mainchoice">
                     <a href="../index.html">Home</a>
@@ -31,6 +46,7 @@
 					<a href="../account.html">Account</a>
                 </div>
             </nav>
+
         </div>
         <!--Form-->
         <div class="text">
@@ -40,19 +56,19 @@
             <p>Hội nghị đã được nghe báo cáo khái quát các nét chính của công tác sinh viên năm học 2021-2022 do TS. Nguyễn Văn Hải –Trưởng phòng CTCT&SV trình bày; báo cáo về các hoạt động phong trào do Đoàn Thanh niên, Hội sinh viên tổ chức…</p>
             <p>Sau các nội dung báo cáo, Hội nghị chuyển sang phần trao đổi, đối thoại giữa lãnh đạo Nhà trường với đại diện sinh viên. Các nội dung được trao đổi liên quan  đến công tác đào tạo, học phí, cơ sở vật chất, chế độ chính sách đối với người học ... Mọi ý kiến của sinh viên đều được lãnh đạo Nhà trường, các phòng ban chức năng trả lời và giải đáp thỏa đáng, rõ ràng, giải tỏa những lo lắng, băn khoăn của sinh viên trên tinh thần trao đổi cởi mở, thẳng thắn, trách nhiệm. Bên cạnh đó, nhiều ý kiến của sinh phản ánh, góp ý của sinh viên cũng được Nhà trường tiếp thu và điều chỉnh trong năm học mới.</p>
             <p><b>Một số hình ảnh về hội nghị:</b></p>
-            <img src="../all_IMG/c1.jfif" alt="">
+            <img src="../all_IMG/IMG_information/c1.jfif" alt="">
             <p id="anh">Lãnh đạo Nhà trường đối thoại với đại diện sinh viên</p>
-            <img src="../all_IMG/c2.jfif" alt="">
-            <img src="../all_IMG/c3.jfif" alt="">
+            <img src="../all_IMG/IMG_information/c2.jfif" alt="">
+            <img src="../all_IMG/IMG_information/c3.jfif" alt="">
             <p id="anh">Sinh viên trao đổi các nội dung liên quan đến hoạt động của Nhà trường</p>
             <p align="right" ><b>Đăng bởi: vnlinh </b></p>
             <hr>
             <h3> Có thể bạn quan tâm: </h3>
             <hr>
             <ul>
+                <li><a href="truong-dai-hoc-giao-thong-van-tai-don-tan-sinh-vien-k63.html">Trường Đại học Giao thông vận tải đón Tân sinh viên Khóa 63</a></li>
                 <li><a href="le-ban-giao-va-dua-vao-su-dung-he-thong-thiet-bi-tai-tro-cua-du-an-doi-moi-quan-tri-dai-hoc-tai-dong-nam-a-pursea.html">Lễ bàn giao và đưa vào sử dụng hệ thống thiết bị tài trợ của dự án Đổi mới Quản trị đại học tại Đông Nam Á - PURSEA</a></li>
-                <li><a href="diem_chuan_2022_truong_DH_GTVT.html">Trường ĐH Giao Thông Vận Tải - HỆ THỐNG QUẢN LÝ ĐIỂM</a></li>
-                <li><a href="hoi-nghi-tong-ket-nam-hoc-2021-2022-va-doi-thoai-giua-lanh-dao-nha-truong-voi-dai-dien-sinh-vien.html">Hội nghị Tổng kết năm học 2021-2022 và Đối thoại giữa lãnh đạo Nhà trường với đại diện sinh viên</a></li>
+                <li><a href="diem_chuan_2022_truong_DH_GTVT.html">CÔNG BỐ ĐIỂM TRÚNG TUYỂN ĐẠI HỌC HỆ CHÍNH QUY NĂM 2022</a></li>
             </ul>
         </div>
     </div>

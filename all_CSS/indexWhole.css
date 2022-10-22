@@ -37,7 +37,7 @@ body a{
 }
 #header .titleh1{
     margin-right: 4rem;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: #fff;
 }
 #header .header-img{
@@ -324,7 +324,7 @@ body a{
     }
     #header .titleh1{
         font-size: 1.5em;
-        margin: 1em 1em 1em 0em;
+        margin: 1em 0em 1em -2em;
     }
     #nav{
         width: 100%;
@@ -425,13 +425,13 @@ body a{
         padding-top: 0.4rem;
     }
     #header .header-utc h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     #header .header-utc .titleh3{
         font-size: 1em;
     }
     #header .titleh1{
-        font-size: 2.2em;
+        font-size: 2em;
         margin: 1em 0 1em -12em;
     }
     #nav{

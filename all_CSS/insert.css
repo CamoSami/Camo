@@ -45,7 +45,7 @@ body {
     height: 36px;
     border-radius: 24px;
     margin: auto;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.27, 1);
 }
 #button:hover {
     width: 56px;
@@ -71,13 +71,13 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.27, 1);
 }
 .navlinks .subchoice{
     padding: 15px 0 15px 20px;
     display: flex;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.27, 1);
     background-color: #5f5f5f;
 }
 .navlinks div.mainchoice:hover{
@@ -111,7 +111,7 @@ a{
 }
 table tr td{
     font-size: 14px;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.27, 1);
 }
 .scoreBoard.extended{
     max-height: 65vh;
@@ -142,7 +142,7 @@ div.button .normal {
     text-align: center;
     background-color: #5f5f5f;
     color:white;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.27, 1);
     cursor: pointer;
 }
 .warning {
@@ -150,14 +150,14 @@ div.button .normal {
     background-color:white; 
     color: rgb(228, 28, 28); 
     border: none;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.27, 1);
 }
 .tip {
     text-align: center;
     background-color:white; 
     color:#002395;
     border: none;
-    transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.27, 1);
 }
 div.button .normal:hover {
     background-color:rgb(152, 152, 152);

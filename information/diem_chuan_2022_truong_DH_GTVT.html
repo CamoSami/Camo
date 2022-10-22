@@ -7,16 +7,31 @@
     <link rel="stylesheet" type="text/css" href="../all_CSS/information.css">
     <link rel="stylesheet" type="text/css" href="../all_CSS/informationRes.css">
     <title>Score Management System</title>
-    <link rel="icon" type="image/png" href="../all_IMG/logo.png"/>
+    <link rel="icon" type="image/png" href="../all_IMG/IMG_icon/logo.png"/>
 </head>
 <body>
 
     <!--Form-->
     <div class="container">
         <div class="header">
-            <h1 class="title">University of Transport and Communication - SCORE MANAGEMENT SYSTEM</h1>
+            <button id="button">></button>
+            
+            <script>
+                const button = document.querySelector("#button");
+
+                button.addEventListener('click', () => {
+                    document.querySelector(".sidebar").classList.toggle("active");
+
+                    if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                    else button.innerHTML = ">";
+                });
+            </script> 
+            
+            <h1 class="title">University of Transport and Communication</h1>
+            <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
         </div>
         <div class="sidebar">
+
             <nav class="navlinks">
                 <div class="mainchoice">
                     <a href="../index.html">Home</a>
@@ -31,6 +46,7 @@
 					<a href="../account.html">Account</a>
                 </div>
             </nav>
+
         </div>
         <!--Form-->
         <div class="text">
@@ -38,9 +54,9 @@
             <p><b>Trường Đại học Giao thông vận tải thông báo điểm trúng tuyển đại học hệ chính quy năm 2022 như sau: </b></p>  
             <div id="bar">
                 
-                <img src="../all_IMG/b1.jpg" alt="">
-                <img src="../all_IMG/b2.jpg" alt="">
-                <img src="../all_IMG/b3.jpg" alt="">
+                <img src="../all_IMG/IMG_information/b1.jpg" alt="">
+                <img src="../all_IMG/IMG_information/b2.jpg" alt="">
+                <img src="../all_IMG/IMG_information/b3.jpg" alt="">
             </div>
             <p><b>THÍ SINH LƯU Ý:</b></p>
             <p>Tiêu chí phụ chỉ áp dụng với những thí sinh có tổng điểm xét tuyển vừa đúng bằng điểm trúng tuyển.</p>
