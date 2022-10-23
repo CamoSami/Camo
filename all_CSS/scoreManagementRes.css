@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .header {
         grid-template-columns: 1fr 1fr;
     }
@@ -52,7 +52,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .container {
         grid-template-rows: 80px 1fr;
     }
@@ -103,7 +103,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
     .content {
         margin: 5vh 0 0 0;

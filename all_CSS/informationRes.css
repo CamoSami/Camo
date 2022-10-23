@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .header {
         grid-template-columns: 1fr 1fr;
     }
@@ -10,7 +10,7 @@
     }
     .box {
         padding: 30px;
-        grid-template-columns: 20% 70%;
+        grid-template-columns: 25% 75%;
     }
     .box-text {
         margin-left: 65px;
@@ -103,7 +103,7 @@
 
 }
 
-@media (min-width: 768px) and (max-width: 1080px){
+@media (min-width: 769px) and (max-width: 1080px){
     .container {
         grid-template-rows: 80px 1fr;
     }
@@ -170,7 +170,7 @@
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 769px){
 
     .box-container {
         margin: 5vh 5vw 0 5vw;
