@@ -8,6 +8,13 @@
     .text{
         margin: 5vh auto 0 auto;
     }
+    .box {
+        padding: 30px;
+        grid-template-columns: 20% 70%;
+    }
+    .box-text {
+        margin-left: 65px;
+    }
 }
 
 @media (min-width: 1080px){
@@ -71,6 +78,9 @@
     height: 140px;
 	}
     /*nd*/
+    .box-container{
+        width: 75vw;
+    }
     .text{
         width: 75vw;
     }
@@ -123,6 +133,9 @@
     .text{
         width: 65vw;
     }
+    .box-container{
+        width: 65vw;
+    }
     .box{
     	margin-left: 10px;
     	margin-bottom: 10px;
@@ -160,7 +173,10 @@
 @media (max-width: 768px){
 
     .box-container {
-        margin: 5vh 0 0 0;
+        margin: 5vh 5vw 0 5vw;
+    }
+    .text {
+        margin: 5vh 5vw 0 5vw;
     }
     #button{
         display: inline-block !important;
@@ -226,8 +242,9 @@
 
     /* Thong tin */
     .box{
-    	margin-left: 10px;
-    	margin-bottom: 10px;
+        margin: 0 0 10px 0;
+        grid-template-rows: auto 1fr;
+        align-self: center;
     }
     .box-text a{
         padding-top: -10px;
@@ -238,8 +255,8 @@
     	padding-top: 10px;
     }
     .box img{
-        width: 165px;
-        height: 150px;
+        width: 70vw;
+        height: 70vw;
 	}
     /*nd*/
 	.text h1{
@@ -252,8 +269,8 @@
 		font-size: 15px;
 	}
 	.text img{
-		width: 250px;
-		height: 200px;
+        width: 68vw;
+        height: 55vw;
 	}
 	.text ul li a{
 		font-size: 17px;

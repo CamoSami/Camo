@@ -95,14 +95,10 @@ body {
     padding: 30px;
     grid-column: span 4;
 }
-
 .box {
     margin-bottom: 50px;
-    padding: 30px;
     display: grid;
-    grid-template-columns: 20% 70%;
     justify-content: space-evenly;
-    grid-template-rows: auto;
 }
 .box img{
     width: 260px;
@@ -113,12 +109,7 @@ body {
     text-decoration: none;
     color: black;   
 }
-.box-text {
-    margin-left: 65px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 60px;
-}
+
 .box-text p+p{
     font-size: 18px;
     font-style: italic;
@@ -163,8 +154,6 @@ body {
     margin-left: auto; 
     margin-right: auto;
     padding-bottom: 20px;
-    width: 70%;
-    height: 400px ;
 }
 #bar img{
     width: 90%;
