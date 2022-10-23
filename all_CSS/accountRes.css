@@ -2,6 +2,9 @@
     .header {
         grid-template-columns: 1fr 1fr;
     }
+    .content{
+        margin: 5vh auto 0 auto;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -18,34 +21,14 @@
     .sidebar .navlinks div.mainchoice a{
         font-size: 24px;
     }
-    .sidebar .navlinks div.subchoice a{
-        font-size: 20px;
-    }
     .navlinks div.mainchoice {
         height: 30px;
-    }
-    .navlinks div.subchoice {
-        height: 20px;
     }
     .navlinks div.mainchoice:hover {
         height: 60px;
     }
-    .navlinks div.subchoice:hover {
-        height: 40px;
-    }
     .content {
-        width: 65vw;
-    }
-    .button button {
-        width: 120px;
-        height: 30px;
-    }
-    .button button:hover {
-        width: 160px;
-    }
-    .button {
-        width: 300px;
-        height: 40px;
+        width: 75vw;
     }
 }
 
@@ -57,7 +40,7 @@
         height:80px;
     }
     .header h1{
-        font-size: 24px;
+        font-size: 18px;
     }
     .sidebar {
         min-width: 150px;
@@ -65,29 +48,11 @@
     .sidebar .navlinks div.mainchoice a{
         font-size: 20px;
     }
-    .sidebar .navlinks div.subchoice a{
-        font-size: 16px;
-    }
     .content {
         width: 75vw;
     }
     .navlinks div.mainchoice {
         height: 30px;
-    }
-    .navlinks div.subchoice {
-        height: 20px;
-    }
-    div.button {
-        width: 480px;
-        height: 64px;
-    }
-    div.button button {
-        width: 160px;
-        height: 36px;
-        font-size: 16px;
-    }
-    div.button button:hover {
-        width: 240px;
     }
     .navlinks div.mainchoice:hover {
         height: 60px;
@@ -99,6 +64,9 @@
 
 @media (max-width: 768px) {
 
+    .content {
+        margin: 5vh 0 0 0;
+    }
     #button{
         display: inline-block !important;
     }
@@ -122,34 +90,19 @@
         margin-left: 0;
         
     }
-    .sidebar .navlinks .subchoice{
-        margin-left: -100%;
-        width: 230px;
-        transition: all 0.5s cubic-bezier(0.8, 0.01, 0.27, 1);
-    }
-    .sidebar.active .navlinks .subchoice{
-        margin-left: 0;
-    }
     .sidebar .navlinks .mainchoice{
         margin-left: -100%;
         width: 200px;
-        transition: all 0.5s cubic-bezier(0.8, 0.01, 0.27, 1);
+        transition: all 0.5s cubic-bezier(0.7, 0.01, 0.27, 1);
     }
     .sidebar.active .navlinks .mainchoice{
         margin-left: 0;
     }
-
     .navlinks div.mainchoice {
         height: 30px;
     }
-    .navlinks div.subchoice {
-        height: 20px;
-    }
     .navlinks div.mainchoice:hover {
         height: 60px;
-    }
-    .navlinks div.subchoice:hover {
-        height: 45px;
     }
 
     /* Stuff */
@@ -164,36 +117,16 @@
         height:80px;
     }
     .header h1{
-        font-size: 18px;
+        font-size: 14px;
     }
     .sidebar .navlinks div.mainchoice a{
         font-size: 20px;
     }
-    .sidebar .navlinks div.subchoice a{
-        font-size: 16px;
-    }
     .navlinks div.mainchoice {
         height: 30px;
-    }
-    .navlinks div.subchoice {
-        height: 20px;
-    }
-    div.button {
-        width: 480px;
-        height: 64px;
-    }
-    div.button button {
-        width: 160px;
-        height: 36px;
-        font-size: 16px;
-    }
-    div.button button:hover {
-        width: 240px;
     }
     .navlinks div.mainchoice:hover {
         height: 60px;
     }
-    .navlinks div.subchoice:hover {
-        height: 45px;
-    }
+
 }

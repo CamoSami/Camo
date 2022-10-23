@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width; initial-scale=1.0">
+<html lang="en"><head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="all_CSS/account.css">
      <link rel="stylesheet" type="text/css" href="all_CSS/accountRes.css">
      <title>Score Management System</title>
-     <link rel="icon" type="image/png" href="all_IMG/IMG_icon/logo.png"/>
-</head>  
-
-
-     
-<body>
-     <style type="text/css">
-          body {
-          font-size: 18px;
-          font-family: Arial Rounded MT Bold, Helvatica, sans-serif;
-          }
+     <link rel="icon" type="image/png" href="all_IMG/IMG_icon/logo.png">
+     <script src="all_JS/inputPractise.js"></script>
+     <script src="all_JS/inputCourse.js"></script>
+     <script src="all_JS/inputStudent.js"></script>
+     <script src="all_JS/uponSubmit.js"></script>
+     <script src="all_JS/take.js"></script>
+ 
+     <!--        JQuery, for library SweetAlert2         -->
+     <script
+         src="https://code.jquery.com/jquery-3.6.1.js"
+         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+         crossorigin="anonymous">
+     </script>
+ 
+     <!--        SweetAlert2, only for cosmetic uses     -->
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <style>
           table{
                width: 70%;
                text-align: center;
@@ -25,266 +30,288 @@
           table, td, th{
               border: 1px solid #333;
               border-collapse: collapse;
-
-               
           }
           td, th{
                padding: 6px 10px;
           }
           table thead td th{
                text-align: center;
-          
-          }
+          }   
      </style>
+     
+</head>
+<body>
      <div class="container">
-        <div class="header">
-            <h1 class="title">University of Transport and Comunication - SCORE MANAGEMENT SYSTEM</h1>
-        </div>
-        <div class="sidebar">
-            <nav class="navlinks">
-                <div>
-                    <a href="index.html">Home</a>
-                </div>
-                <div>
-                    <a href="scoreManagement.html">Management</a>
-                </div>
-                <div>
-                    <a href="information.html">Information</a>
-               </div>
-                <div>
-                    <a href="account.html" style="text-decoration:underline">Account</a>
-               </div>
-            </nav>
-        </div>
-
-        <div>
-          <h2 align="center" font>Teaching Schedule</h1>
-      <table class="style1 table-hover" align="center">
-          <thead>
-               <tr style="color: white;    background-color:darkblue;"> 
-               <th colspan="2">Thời gian</th>
-               <th>Thứ 2 </th>
-               <th>Thứ 3</th>
-               <th>Thứ 4</th>
-               <th>Thứ 5</th>
-               <th>Thứ 6</th>
-               <th>Thứ 7</th>
-           </tr>
-          </thead>
-          <tbody>
-           <tr > 
-               <td rowspan="2">Sáng</td>
-               <td>Ca 1</td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-           </tr>
-           <tr > 
-               <td>Ca 2</td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-           </tr>
-           <tr > 
-               <td rowspan="2">Chiều</td>
-               <td>Ca 3</td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-           </tr>
-          <tr > 
-               <td>Ca 4</td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-           </tr>
-           <tr > 
-               <td>Tối</td>
-               <td>Ca 5</td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-           </tr>
-           
-          </tbody>
-           <tfoot>
-                <tr > 
-               <td colspan="7" align="left">Tổng ca dạy</td>
-               <td>?</td>
-           </tr>
-           </tfoot>
-      </table>
-
-
-      <h3 align="center" >Kế Hoạch Giảng Dạy và Học Tập Học Kỳ 1 năm 2022-2023</h3>
-      <table class="style2" align="center">
-           <tr>
-                <th colspan="7" style="background-color: yellow;">An Toàn Thông Tin 4</th>
-           </tr>  
-               
-           <tr style="color: white;    background-color:darkblue;">
-                <th>STT</th>
-                <th>Lớp</th>
-                <th>Mã lớp</th>
-                <th>Hội trường</th>
-                <th>Thứ</th>
-                <th>Ca</th>
-                <th>Thời gian học</th>
-           </tr>     
-           <tr>
-                <td colspan="7" style="background-color: orange;" align="left">Đợt 1</td>
-           </tr>  
-           <tr>
-                <td>1</td>
-                <td>K62-ATTT4</td>
-                <td>4869AMRC613</td>
-                <td>A3.105</td>
-                <td>3</td>
-                <td>4</td>
-                <td>11/08/2021</td>
-           </tr>
-           <tr>
-               <td>2</td>
-                <td>K62-ATTT4</td>
-                <td>4869AMRC613</td>
-                <td>A3.105</td>
-                <td>3</td>
-                <td>4</td>
-                <td>11/08/2021</td>
-           </tr>
-           <tr>
-                <td>3</td>
-                <td>K62-ATTT4</td>
-                <td>4869AMRC613</td>
-                <td>A3.105</td>
-                <td>3</td>
-                <td>4</td>
-                <td>11/08/2021</td>
-           </tr>
-           <td colspan="7" style="background-color: orange;" align="left">Đợt 2</td>
-           </tr>  
-           <tr>
-                <td>1</td>
-                <td>K62-ATTT4</td>
-                <td>4869AMRC613</td>
-                <td>A3.105</td>
-                <td>3</td>
-                <td>4</td>
-                <td>11/08/2021</td>
-           </tr>
-           <tr>
-                <td>2</td>
-                <td>K62-ATTT4</td>
-                <td>4869AMRC613</td>
-                <td>A3.105</td>
-                <td>3</td>
-                <td>4</td>
-                <td>11/03/2022</td>
-           </tr>
-           <tr>
-               <td>3</td>
-                <td>K62-ATTT4</td>
-                <td>4869AMRC613</td>
-                <td>A3.105</td>
-                <td>3</td>
-                <td>4</td>
-                <td>11/03/2022</td>
-           </tr>
-      </table>
-      <table class="style3" align="center">
-           <tr>
-                <th colspan="7" style="background-color: yellow;">Công Nghệ Thông Tin 3</th>
-           </tr>  
-               
-           <tr style="color: white;    background-color:darkblue;">
-                <th>STT</th>
-                <th>Lớp</th>
-                <th>Mã lớp</th>
-                <th>Hội trường</th>
-                <th>Thứ</th>
-                <th>Ca</th>
-                <th>Thời gian học</th>
-           </tr>     
-           <tr style="background-color: orange;">
-                <td colspan="7" align="left">Đợt 1</td>
-           </tr>  
-           <tr>
-                <td>1</td>
-                <td>K62-CNTT3</td>
-                <td>211BUS17A01</td>
-                <td>A5.105</td>
-                <td>2</td>
-                <td>3</td>
-                <td>11/08/2021</td>
-           </tr>
-           <tr>
-               <td>2</td>
-                <td>K62-CNTT3</td>
-                <td>211BUS17A01</td>
-                <td>A5.105</td>
-                <td>2</td>
-                <td>3</td>
-                <td>11/08/2021</td>
-           </tr>
-           <tr>
-                <td>3</td>
-                <td>K62-CNTT3</td>
-                <td>211BUS17A01</td>
-                <td>A5.105</td>
-                <td>2</td>
-                <td>3</td>
-                <td>11/08/2021</td>
-           </tr>
-           <td colspan="7" style="background-color: orange;" align="left"i>Đợt 2</td>
-           </tr>  
-           <tr>
-                <td>1</td>
-                <td>K62-CNTT3</td>
-                <td>211BUS17A01</td>
-                <td>A5.105</td>
-                <td>2</td>
-                <td>3</td>
-                <td>11/08/2021</td>
-           </tr>
-           <tr>
-                <td>2</td>
-                <td>K62-CNTT3</td>
-                <td>211BUS17A01</td>
-                <td>A5.105</td>
-                <td>2</td>
-                <td>3</td>
-                <td>11/03/2022</td>
-           </tr>
-           <tr>
-               <td>3</td>
-                <td>K62-CNTT3</td>
-                <td>211BUS17A01</td>
-                <td>A5.105</td>
-                <td>2</td>
-                <td>3</td>
-                <td>11/03/2022</td>
-           </tr>
-      </table>
-        </div>
-    </div>
+         <div class="header">
+             <button id="button">></button>
+             
+             <script>
+                 const button = document.querySelector("#button");
      
+                 button.addEventListener('click', () => {
+                     document.querySelector(".sidebar").classList.toggle("active");
      
+                     if (document.querySelector(".sidebar").classList.contains("active")) button.innerHTML = "<";
+                     else button.innerHTML = ">";
+                 });
+             </script>
+             
+             <h1 class="title">University of Transport and Communication</h1>
+             <h1 class="title">SCORE MANAGEMENT SYSTEM</h1>
+             
+          </div>
+         
+          <div class="sidebar">
+            
+               <nav class="navlinks">
+                    <div class="mainchoice">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="mainchoice">
+                        <a href="scoreManagement.html">Management</a>
+                    </div>
+                    <div class="mainchoice">
+                       <a href="information.html">Information</a>
+                    </div>
+                    <div class="mainchoice" style="text-decoration:underline">
+                       <a href="account.html">Account</a>
+                    </div>
+               </nav>
+          </div>
+
+          <div class="content">
+               <h2 align="center" font>Teaching Schedule</h1>
+               <div class="style1">
+                    <table class="table-hover" align="center">
+                         <thead>
+                              <tr style="color: white;    background-color:darkblue;"> 
+                                   <th colspan="2">Thời gian</th>
+                                   <th>Thứ 2 </th>
+                                   <th>Thứ 3</th>
+                                   <th>Thứ 4</th>
+                                   <th>Thứ 5</th>
+                                   <th>Thứ 6</th>
+                                   <th>Thứ 7</th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr > 
+                                  <td rowspan="2">Sáng</td>
+                                  <td>Ca 1</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr > 
+                                  <td>Ca 2</td>
+                                  <td>TKWeb</td>
+                                  <td>TKWeb</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>TKWeb</td>
+                                  <td></td>
+                              </tr>
+                              <tr > 
+                                  <td rowspan="2">Chiều</td>
+                                  <td>Ca 3</td>
+                                  <td>TKWeb</td>
+                                  <td>TKWeb</td>
+                                  <td></td>
+                                  <td>TKWeb</td>
+                                  <td>TKWeb</td>
+                                  <td>TKWeb</td>
+                              </tr>
+                              <tr > 
+                                  <td>Ca 4</td>
+                                  <td></td>
+                                  <td>TKWeb</td>
+                                  <td>TKWeb</td>
+                                  <td>TKWeb</td>
+                                  <td></td>
+                                  <td>TKWeb</td>
+                              </tr>
+                              <tr > 
+                                  <td>Tối</td>
+                                  <td>Ca 5</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>TKWeb</td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                         
+                         </tbody>
+                         <tfoot>
+                              <tr> 
+                                   <td colspan="7" align="left">Tổng ca dạy</td>
+                                   <td>13</td>
+                              </tr>
+                         </tfoot>
+                    </table>
+               </div>
+
+               <h3 align="center" >Kế Hoạch Giảng Dạy và Học Tập Học Kỳ 1 năm 2022-2023</h3>
+               <div class="style2">
+                    <table align="center">
+                         <tr>
+                              <th colspan="7" style="background-color: yellow;">An Toàn Thông Tin 4</th>
+                         </tr>  
+                    
+                         <tr style="color: white;    background-color:darkblue;">
+                              <th>STT</th>
+                              <th>Lớp</th>
+                              <th>Mã lớp</th>
+                              <th>Hội trường</th>
+                              <th>Thứ</th>
+                              <th>Ca</th>
+                              <th>Thời gian học</th>
+                         </tr>     
+                         <tr>
+                              <td colspan="7" style="background-color: orange;" align="left">Đợt 1</td>
+                         </tr>  
+                         <tr>
+                              <td>1</td>
+                              <td>K62-ATTT4</td>
+                              <td>4869AMRC613</td>
+                              <td>A3.105</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>11/08/2021</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>K62-ATTT4</td>
+                              <td>4869AMRC613</td>
+                              <td>A3.105</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>13/08/2021</td>
+                         </tr>
+                         <tr>
+                              <td>3</td>
+                              <td>K62-ATTT4</td>
+                              <td>4869AMRC613</td>
+                              <td>A3.105</td>
+                              <td>7</td>
+                              <td>3</td>
+                              <td>15/08/2021</td>
+                         </tr>
+                         <td colspan="7" style="background-color: orange;" align="left">Đợt 2</td>
+                         </tr>  
+                         <tr>
+                              <td>1</td>
+                              <td>K62-ATTT4</td>
+                              <td>4869AMRC613</td>
+                              <td>A3.105</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>7/03/2021</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>K62-ATTT4</td>
+                              <td>4869AMRC613</td>
+                              <td>A3.105</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>9/03/2022</td>
+                         </tr>
+                         <tr>
+                             <td>3</td>
+                              <td>K62-ATTT4</td>
+                              <td>4869AMRC613</td>
+                              <td>A3.105</td>
+                              <td>7</td>
+                              <td>3</td>
+                              <td>11/03/2022</td>
+                         </tr>
+                    </table>  
+               </div>
+               
+               <br>
+               
+               <div class="style3">
+                    <table align="center">
+                         <tr>
+                              <th colspan="7" style="background-color: yellow;">Công Nghệ Thông Tin 3</th>
+                         </tr>  
+                    
+                         <tr style="color: white;    background-color:darkblue;">
+                              <th>STT</th>
+                              <th>Lớp</th>
+                              <th>Mã lớp</th>
+                              <th>Hội trường</th>
+                              <th>Thứ</th>
+                              <th>Ca</th>
+                              <th>Thời gian học</th>
+                         </tr>     
+                         <tr style="background-color: orange;">
+                              <td colspan="7" align="left">Đợt 1</td>
+                         </tr>  
+                         <tr>
+                              <td>1</td>
+                              <td>K62-CNTT3</td>
+                              <td>211BUS17A01</td>
+                              <td>A5.105</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>18/08/2021</td>
+                         </tr>
+                         <tr>
+                             <td>2</td>
+                              <td>K62-CNTT3</td>
+                              <td>211BUS17A01</td>
+                              <td>A5.105</td>
+                              <td>4</td>
+                              <td>2</td>
+                              <td>20/08/2021</td>
+                         </tr>
+                         <tr>
+                              <td>3</td>
+                              <td>K62-CNTT3</td>
+                              <td>211BUS17A01</td>
+                              <td>A5.105</td>
+                              <td>5</td>
+                              <td>2</td>
+                              <td>21/08/2021</td>
+                         </tr>
+                         <td colspan="7" style="background-color: orange;" align="left"i>Đợt 2</td>
+                         </tr>  
+                         <tr>
+                              <td>1</td>
+                              <td>K62-CNTT3</td>
+                              <td>211BUS17A01</td>
+                              <td>A5.105</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>11/03/2021</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>K62-CNTT3</td>
+                              <td>211BUS17A01</td>
+                              <td>A5.105</td>
+                              <td>4</td>
+                              <td>2</td>
+                              <td>13/03/2022</td>
+                         </tr>
+                         <tr>
+                             <td>3</td>
+                              <td>K62-CNTT3</td>
+                              <td>211BUS17A01</td>
+                              <td>A5.105</td>
+                              <td>5</td>
+                              <td>2</td>
+                              <td>14/03/2022</td>
+                         </tr>
+                    </table>
+               </div>
       
-      
+          </div>
+     </div>
 </body>
 </html>
