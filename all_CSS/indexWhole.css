@@ -68,7 +68,7 @@ body a{
     line-height: 2.8rem; 
     padding: 0px 3rem; 
     display: block;
-    width: 7.8rem;
+    width: 11.8rem;
 }
 #nav li:hover .subnav{
     display: block;
@@ -118,7 +118,7 @@ body a{
 }
 .transfer i:last-child{
     top: 48%;
-    right: 10rem;
+    right: 9rem;
 }
 .transfer i:hover{
     color: aqua;
@@ -157,7 +157,6 @@ body a{
 
 .item a p{
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 1.3rem;
     color: #0984e3;
     padding: 0.6rem 1.5rem;
@@ -165,7 +164,6 @@ body a{
 }
 .item a p+p{
     font-weight: normal;
-    text-transform:lowercase ;
     color: #333;
     font-size: 1rem;
 }
@@ -174,8 +172,7 @@ body a{
     text-decoration: underline;
     text-decoration: none;
 }
-#footer{
-}
+
 .containerutc{
     display:flex ;
 }
@@ -255,6 +252,7 @@ body a{
 .col-3 li a,
 .col-2 li a{
     list-style: none;
+    color: #f1f2f6;
 }
 .col-3 .nav-item,
 .col-2 .nav-item{
@@ -283,21 +281,7 @@ body a{
     width: 60%;
     margin: 0 auto;
 }
-/* @media only screen and(max-width:46.1875em) {
-  
-}
-@media only screen and(min-width:46.25em) and(max-width:63.9375em) {
-    #content{
-        flex-direction: column;
-    }
-    #content .information img{
-        width: 100rem;
-        margin: 0rem 7.8rem 0em 13rem;
-    }
-} */
-
-
-@media (max-width: 769px) {
+@media (max-width: 768px) {
     #container{
         
     }
@@ -404,7 +388,7 @@ body a{
     }
     
 }
-@media (min-width: 769px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px){
     #container{
         
     }
@@ -506,6 +490,128 @@ body a{
     .col-4 {
         margin: 3rem 0 0rem 0rem;
         margin-right: 2rem;
+    }
+    
+}
+@media (max-width :576px){
+    #container{
+        
+    }
+    #header {
+        width: 100%;
+        height: 12vw;
+        padding: 0 2rem 0 2rem;
+    }
+    #header .logo{
+        padding-left: 2rem;
+    }
+    #header .header-img{
+        padding-right: 0em;
+    }
+    #header img{
+        width: 3rem;
+        padding-right: 0rem;
+        padding-top: 0.4rem;
+    }
+    #header .header-utc h2 {
+        font-size: 0.8em;
+    }
+    #header .header-utc .titleh3{
+        font-size: 0.5em;
+    }
+    #header .titleh1{
+        font-size: 1.1em;
+        margin: 1em 1em 1em -12em;
+    }
+    #nav{
+        width: 100%;
+        padding: 0 3rem 0 1rem;
+        height: 2.8rem;
+    }
+    #nav li a{
+        padding: 0rem;
+        width: 8rem;
+    }
+    #slider{
+        width: 100%;
+        height: 60vw;
+        padding: 0 2rem 0 2rem;
+    }
+    #slider img{
+        width: 88%;
+        height: 60vw;
+        margin-left: 2.4rem ;
+    }
+    #slider i:first-child{
+        left: 14%;
+    }
+    #slider i:last-child{
+        right: 14%;
+    }
+    #content{
+        width: 100%;
+        height: 230vw;
+        padding: 0 2rem 0 2rem;
+        flex-direction: column;
+    }
+    #content .information img{
+        width: 88%;
+        margin-left: 2.4rem;
+        margin-right: 1rem;
+    }
+    .item a p{
+        padding: 0.6rem 0.5rem;
+    }
+    .information .item{
+        margin: 1rem 0rem 0rem 2.4rem;
+        width: 14.6rem;
+    }
+    #footer{
+        width: 100%;
+        padding: 0 3rem 0 1rem;
+        font-size: 0.5rem;
+    }
+    .col-1{
+        padding-left: 0px;
+    }
+    .col-1 img {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 0rem;
+        margin-right: 0.5rem;
+    }
+    .col-1 h1{
+        font-size: 0.7rem;
+        padding-top: 0.5rem;
+    }
+    .col-1 .logo {
+        margin-bottom: 1rem;
+        margin-right: 0.5rem;
+    }
+    .col-1 .item {
+        padding-bottom: 0.2rem;
+        margin-left: 0rem;
+        /* font-size: 1rem; */
+    }
+    .col-1 .social{
+        margin-top: -1rem ;
+    }
+    .col-1 .socials{
+        margin-top: -1rem;
+    }
+    .col-1 .socials h6,
+    .col-1 .social .item{
+        font-size: 1rem
+    }
+    .col-1 h3{
+        font-size: 0.6rem;
+    }
+    .col-3 h3, .col-2 h3 {
+        font-size: 0.6rem;
+    }
+    .col-4 {
+        margin: 3rem 0 0rem 0rem;
+        margin-right: -2rem;
     }
     
 }
