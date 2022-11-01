@@ -36,8 +36,8 @@ body a{
     font-size: 1.6em;
 }
 #header .titleh1{
-    margin-right: 4rem;
-    font-size: 2.6rem;
+    margin-right: 2rem;
+    font-size: 2.2rem;
     color: #fff;
 }
 #header .header-img{
@@ -301,13 +301,13 @@ body a{
         padding-right: 0.5rem;
     }
     #header .header-utc h2 {
-        font-size: 1.2em;
+        font-size: 115%;
     }
     #header .header-utc .titleh3{
-        font-size: 0.7em;
+        font-size: 70%;
     }
     #header .titleh1{
-        font-size: 1.1em;
+        font-size: 120%;
         margin: 1em -1em 1em -13em;
     }
     #nav{
@@ -514,13 +514,13 @@ body a{
         padding-top: 0.4rem;
     }
     #header .header-utc h2 {
-        font-size: 0.8em;
+        font-size: 68%;
     }
     #header .header-utc .titleh3{
-        font-size: 0.5em;
+        font-size: 44%;
     }
     #header .titleh1{
-        font-size: 1em;
+        font-size: 80%;
         margin: 1em 0em 1em -12em;
     }
     #nav{
@@ -529,8 +529,9 @@ body a{
         height: 2.8rem;
     }
     #nav li a{
-        padding: 0rem 0rem 0rem 0.5rem;
+        padding: 0rem 0rem 0rem 2rem;
         width: auto;
+        font-size: 70%;
     }
     #slider{
         width: 100%;
